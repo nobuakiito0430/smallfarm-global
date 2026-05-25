@@ -1,1 +1,304 @@
-[]
+[
+  {
+    "title": "Commercial Viability of Phloem Bundle Production as a Sustainable Agro Enterprise in Limpopo Province, South Africa",
+    "source": "OpenAlex",
+    "date": "2026-05-24",
+    "source_url": "https://doi.org/10.51137/wrp.ijsbe.679",
+    "authors": [
+      "Mantlo Richard Ngwepe",
+      "Humphrey Lephethe Motsepe"
+    ],
+    "cited_by_count": 0,
+    "summary_ja": "本記事は、南アフリカのリンポポ州における篩管束生産の商業的実現可能性を評価する。小規模農家の参加拡大、好ましい農業生態学的条件、持続可能な繊維製品への需要増が指摘される一方で、収益性はバリューチェーン統合、加工インフラ、協同組合モデル、政策整合性に依存するとされる。最終的に、地域製造クラスターや輸出志向のグリーン市場との連携が商業化の鍵となる。",
+    "summary_en": "This article assesses the commercial viability of phloem bundle production as a sustainable agro enterprise in Limpopo Province, South Africa. Findings highlight expanding smallholder participation, favorable agro-ecological conditions, and increasing demand for sustainable fiber products, but profitability relies on value chain integration, processing infrastructure, cooperative models, and policy alignment. Ultimately, commercialization is deemed feasible if linked to local manufacturing clusters and export-oriented green markets.",
+    "tags": [
+      "phloem bundles",
+      "sustainable agriculture",
+      "agro-enterprise",
+      "Limpopo Province",
+      "South Africa",
+      "smallholder participation",
+      "value chain integration",
+      "processing infrastructure",
+      "cooperative models",
+      "policy alignment",
+      "green markets"
+    ],
+    "bottlenecks": [
+      {
+        "category": "scalability",
+        "description": "バリューチェーン全体の統合が不足している場合、収益性が制約される可能性がある。",
+        "severity": "medium",
+        "evidence_quote": "However, profitability depends on value chain integration, processing infrastructure, cooperative models, and policy alignment.",
+        "is_explicit": true
+      },
+      {
+        "category": "post_harvest",
+        "description": "加工インフラの不足が収益性に影響を与える可能性がある。",
+        "severity": "medium",
+        "evidence_quote": "However, profitability depends on value chain integration, processing infrastructure, cooperative models, and policy alignment.",
+        "is_explicit": true
+      },
+      {
+        "category": "institutional",
+        "description": "効果的な協同組合モデルの欠如が収益性に影響を与える可能性がある。",
+        "severity": "medium",
+        "evidence_quote": "However, profitability depends on value chain integration, processing infrastructure, cooperative models, and policy alignment.",
+        "is_explicit": true
+      },
+      {
+        "category": "institutional",
+        "description": "政策の一貫性と整合性の不足が商業的成功の妨げとなる可能性がある。",
+        "severity": "medium",
+        "evidence_quote": "However, profitability depends on value chain integration, processing infrastructure, cooperative models, and policy alignment.",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "institutional_integration",
+        "description": "バリューチェーンを統合することで収益性を確保できる。",
+        "evidence_quote": "However, profitability depends on value chain integration, processing infrastructure, cooperative models, and policy alignment.",
+        "is_explicit": true
+      },
+      {
+        "category": "post_harvest",
+        "description": "十分な加工インフラを整備することで収益性を高めることができる。",
+        "evidence_quote": "However, profitability depends on value chain integration, processing infrastructure, cooperative models, and policy alignment.",
+        "is_explicit": true
+      },
+      {
+        "category": "cooperative",
+        "description": "協同組合モデルを採用することで収益性を向上させることができる。",
+        "evidence_quote": "However, profitability depends on value chain integration, processing infrastructure, cooperative models, and policy alignment.",
+        "is_explicit": true
+      },
+      {
+        "category": "institutional_integration",
+        "description": "政策の整合性を図ることで、商業的成功の可能性を高める。",
+        "evidence_quote": "However, profitability depends on value chain integration, processing infrastructure, cooperative models, and policy alignment.",
+        "is_explicit": true
+      },
+      {
+        "category": "market_linkage",
+        "description": "篩管束の商業化は、地域の製造クラスターと連携することで実現可能となる。",
+        "evidence_quote": "The study concludes that phloem bundle commercialization is feasible if linked to local manufacturing clusters and export oriented green markets.",
+        "is_explicit": true
+      },
+      {
+        "category": "market_linkage",
+        "description": "輸出志向のグリーン市場に接続することで、篩管束の商業化が促進される。",
+        "evidence_quote": "The study concludes that phloem bundle commercialization is feasible if linked to local manufacturing clusters and export oriented green markets.",
+        "is_explicit": true
+      },
+      {
+        "category": "institutional_integration",
+        "description": "構造化された投資と制度的支援により、中程度から高い商業的実行可能性が期待される。",
+        "evidence_quote": "Probability modelling based on market growth trends and regional production capacity suggests moderate to high commercial viability under structured investment and institutional support.",
+        "is_explicit": true
+      }
+    ],
+    "ai_confidence": 80,
+    "analyzed_at": "2026-05-25T09:33:45.940407"
+  },
+  {
+    "title": "The role of social grants on commercialization among smallholder farmers in South Africa: evidence from a continuous treatment approach",
+    "source": "OpenAlex",
+    "date": "2026-05-23",
+    "source_url": "https://doi.org/10.14749/32380941",
+    "authors": [
+      "Human Sciences Research Council"
+    ],
+    "cited_by_count": 0,
+    "summary_ja": "本研究は、南アフリカの小規模農家における社会保障給付金がトウモロコシの市場余剰販売へのインセンティブに与える役割を調査しました。結果は、社会保障給付金と小規模農家の市場参加レベルの間に負の関連性があることを示しており、ディスインセンティブ仮説を支持しています。研究は、小規模農家の商業化を促進する政策は、社会保障給付金の阻害効果をいかに軽減するかにも焦点を当てるべきだと提言しています。",
+    "summary_en": "This study examined the role of social grants on smallholder producers' incentives to sell maize marketable surplus in South Africa. The findings support the disincentive hypothesis, demonstrating a negative association between social grants and smallholders' market participation levels. The study suggests that policies aimed at increasing smallholder commercialization should also focus on reducing the disincentive effects of social grants.",
+    "tags": [
+      "smallholder farmers",
+      "commercialization",
+      "social grants",
+      "market participation",
+      "South Africa",
+      "maize"
+    ],
+    "bottlenecks": [],
+    "success_factors": [],
+    "ai_confidence": 70,
+    "analyzed_at": "2026-05-25T09:34:19.800858"
+  },
+  {
+    "title": "The impact of social grant-dependency on agricultural entrepreneurship among rural households in Kwazulu-Natal, South Africa",
+    "source": "OpenAlex",
+    "date": "2026-05-23",
+    "source_url": "https://doi.org/10.14749/32383527",
+    "authors": [
+      "Human Sciences Research Council"
+    ],
+    "cited_by_count": 0,
+    "summary_ja": "本研究は、南アフリカのKwaZulu-Natal州における農村世帯の農業起業家精神に対する社会扶助依存の影響を評価した。結果として、社会扶助への依存は農業起業家精神と負の関連があり、不利益効果を生み出していることが示された。一方で、世帯のリスク負担能力、政府支援サービス、および制度的・インフラ的支援は、農業起業家精神に正の影響を与えることが明らかになった。",
+    "summary_en": "This study assessed the impact of social grant-dependency on agricultural entrepreneurship among rural households in KwaZulu-Natal, South Africa. The empirical results indicated that dependency on social grants was negatively associated with agricultural entrepreneurship, creating disincentive effects. Conversely, households' risk-bearing ability, access to government support services, and institutional and/or infrastructural support had positive effects on agricultural entrepreneurship.",
+    "tags": [
+      "social grants",
+      "entrepreneurship",
+      "smallholder farmers",
+      "South Africa",
+      "rural development",
+      "agricultural entrepreneurship",
+      "poverty reduction"
+    ],
+    "bottlenecks": [],
+    "success_factors": [
+      {
+        "category": "institutional_integration",
+        "description": "普及サービス、信用、研修といった政府支援サービスへのアクセスを改善すること。",
+        "evidence_quote": "access to government support services (extension, credit and training) ... had positive effects on agricultural entrepreneurship. ... policy-makers should prioritize ... access to government support services...",
+        "is_explicit": true
+      },
+      {
+        "category": "institutional_integration",
+        "description": "土地所有権の安定、市場アクセス、灌漑アクセスといった制度的およびインフラ的支援。",
+        "evidence_quote": "institutional and/or infrastructural support (tenure security, market access and irrigation access) had positive effects on agricultural entrepreneurship.",
+        "is_explicit": true
+      }
+    ],
+    "ai_confidence": 85,
+    "analyzed_at": "2026-05-25T09:35:24.147366"
+  },
+  {
+    "title": "Multidimensional Evaluation of Natural Pesticides for the Control of Maize Armyworm Spodoptera frugiperda (Lepidoptera: Noctuidae) in Western Burundi: Efficacy and Lessons Learned",
+    "source": "OpenAlex",
+    "date": "2026-05-22",
+    "source_url": "https://doi.org/10.37284/eajenr.9.2.5015",
+    "authors": [
+      "Anaclet Nibasumba",
+      "Annick Sezibera",
+      "Félicien Ndacayisaba",
+      "Evariste Nkubaye",
+      "Soter Ndihokubwayo"
+    ],
+    "cited_by_count": 0,
+    "summary_ja": "本研究は、ブルンジ西部においてトウモロコシのハスモンヨトウ防除に有効な2つの自然農薬（砂灰混合物とティトニア抽出物）の有効性を評価した。これらの自然農薬は害虫の影響を大幅に軽減し、化学農薬に比べてトウモロコシの収量を改善することを示した。労働集約性や原材料の入手可能性といった課題が特定されたが、参加型アクションリサーチが小規模農家の技術導入を加速させる価値を強調している。",
+    "summary_en": "This study evaluated the efficacy of two natural pesticides, sand–ash mixture and Tithonia diversifolia extract, for controlling maize armyworm in Western Burundi. It demonstrated that these natural pesticides significantly reduced pest impact and improved maize yield compared to chemical pesticides. Challenges such as labor intensity and limited availability of materials were identified, but the study highlighted the value of participatory action research in accelerating technology adoption in smallholder farming systems.",
+    "tags": [
+      "Pesticides",
+      "Sustainable Agriculture",
+      "Maize",
+      "Smallholder Farmers",
+      "Technology Adoption",
+      "Participatory Research",
+      "Burundi",
+      "Pest Control"
+    ],
+    "bottlenecks": [],
+    "success_factors": [
+      {
+        "category": "behavioral_change",
+        "description": "自然農薬は、効果的で持続可能かつ移転可能な代替手段を提供し、農家の採用を促す。",
+        "evidence_quote": "Overall, the study demonstrates that natural pesticides offer effective, sustainable, and transferable alternatives to chemical pesticides, and highlights the value of participatory action research in accelerating technology adoption in smallholder farming systems.",
+        "is_explicit": true
+      },
+      {
+        "category": "farmer_ownership",
+        "description": "参加型アクションリサーチは、小規模農家における技術導入を加速させる上で価値がある。",
+        "evidence_quote": "Overall, the study demonstrates that natural pesticides offer effective, sustainable, and transferable alternatives to chemical pesticides, and highlights the value of participatory action research in accelerating technology adoption in smallholder farming systems.",
+        "is_explicit": true
+      },
+      {
+        "category": "farmer_ownership",
+        "description": "農家自身がティトニアの栽培化や砂灰混合物の散布ツールの開発といった実践的な解決策を提案した。",
+        "evidence_quote": "Farmers proposed practical solutions, including domestication of Tithonia diversifolia and the design and development of an application tool for the ash–sand mixture.",
+        "is_explicit": true
+      },
+      {
+        "category": "behavioral_change",
+        "description": "ティトニア抽出物は害虫駆除以外に植物の活力と穀物品質を向上させ、砂灰混合物は低コストの防除オプションを提供するため、農家の技術採用を促す。",
+        "evidence_quote": "Beyond pest control, Tithonia diversifolia extract also improved plant vigour and grain quality, while the sand–ash mixture provided a low-cost control option.",
+        "is_explicit": true
+      }
+    ],
+    "ai_confidence": 70,
+    "analyzed_at": "2026-05-25T09:36:21.546788"
+  },
+  {
+    "title": "Climate-smart agriculture adoption as a pathway to food security among smallholder farmers: a review paper",
+    "source": "OpenAlex",
+    "date": "2026-05-22",
+    "source_url": "https://doi.org/10.3389/fsufs.2026.1760101",
+    "authors": [
+      "Valentine Ngalame Alobwede",
+      "Daniel M. Nzengya"
+    ],
+    "cited_by_count": 0,
+    "summary_ja": "本レビュー論文は、開発途上国の小規模農家における気候変動に強い農業（CSA）の導入に関する実証的なギャップを特定し、食料安全保障への影響を調査したものです。2016年から2025年までの58件の研究を分析し、食料安全保障、CSA導入、世帯収入、作物生産が主な成果として検討され、CSA研究には理論的、方法論的、地理的なギャップが存在することが示されました。",
+    "summary_en": "This review paper identifies empirical gaps in smallholder farmers' adoption of Climate-Smart Agriculture (CSA) practices and examines their implications for achieving food security in developing countries. Analyzing 58 studies published between 2016 and 2025, it found that food security, CSA adoption, household income, and crop production were the most frequently examined outcomes, highlighting theoretical, methodological, and geographical gaps in CSA research.",
+    "tags": [
+      "Climate-Smart Agriculture",
+      "Smallholder Farmers",
+      "Food Security",
+      "Review",
+      "Adoption",
+      "Extension Services",
+      "Rural Poverty"
+    ],
+    "bottlenecks": [],
+    "success_factors": [
+      {
+        "category": "farmer_ownership",
+        "description": "政府と開発パートナーは、小規模農家と協力して状況に応じたCSAプログラムを共同設計すべきです。",
+        "evidence_quote": "governments and development partners should co-design context-specific CSA programs with smallholder farmers.",
+        "is_explicit": true
+      },
+      {
+        "category": "institutional_integration",
+        "description": "先住民の知識と科学的知識を統合する参加型研修を通じて普及サービスを強化することが不可欠です。",
+        "evidence_quote": "Strengthening extension services through participatory training that integrates indigenous and scientific knowledge is essential.",
+        "is_explicit": true
+      }
+    ],
+    "ai_confidence": 62,
+    "analyzed_at": "2026-05-25T09:37:11.017920"
+  },
+  {
+    "title": "Pesantren-Based Food Estate: Integrating Agrarian Reform, Islamic Principles, and Food Security in Indonesia",
+    "source": "OpenAlex",
+    "date": "2026-05-18",
+    "source_url": "https://doi.org/10.36956/rwae.v7i2.2781",
+    "authors": [
+      "Ujang Maman",
+      "Achmad Tjachja Nugraha",
+      "Zulmaneri Manir",
+      "Iwan Aminuddin",
+      "Lilis Imamah Icdayati"
+    ],
+    "cited_by_count": 0,
+    "summary_ja": "インドネシアの食料生産基地政策において、小規模農家を疎外する従来のモデルの課題に対し、ペサントレン（イスラム寄宿学校）を制度的管理者とする代替モデルが提案されている。このモデルは、国有地のペサントレンへの割り当てと、地元農家との収益分配パートナーシップを通じて、包括的な農村開発を目指す。研究では、ペサントレンが強い潜在力を持つ一方で、運用効率のために耕作前・耕作・支援システムの改善が必要であることが示された。",
+    "summary_en": "Addressing the challenges of conventional food estate models that marginalize smallholders in Indonesia, this study proposes an alternative model where pesantren (Islamic boarding schools) act as institutional managers. This model aims to broaden farmers' access to land and promote inclusive rural development through state land allocation to pesantren and subsequent yield-sharing partnerships with local farmers. Findings indicate pesantren have strong potential as mediating institutions, but improvements are needed in pre-cultivation, cultivation, and support systems to ensure operational efficiency.",
+    "tags": [
+      "Indonesia",
+      "food security",
+      "agrarian reform",
+      "smallholders",
+      "pesantren",
+      "islamic principles",
+      "yield-sharing",
+      "institutional innovation",
+      "rural development"
+    ],
+    "bottlenecks": [],
+    "success_factors": [
+      {
+        "category": "institutional_integration",
+        "description": "ペサントレンは、道徳的正当性、社会資本、経営能力を組み合わせることで、食料生産基地のガバナンスにおいて強力な調停機関としての潜在力を持つ。",
+        "evidence_quote": "The findings reveal that pesantren possess strong potential to act as mediating institutions that combine moral legitimacy, social capital, and managerial capacity in food estate governance.",
+        "is_explicit": true
+      },
+      {
+        "category": "institutional_integration",
+        "description": "イスラムの正義、協力、管理の原則を農地改革に組み込むことで、このモデルは国家農業政策とコミュニティベースの宗教機関を橋渡しする。",
+        "evidence_quote": "By embedding Islamic principles of justice, cooperation, and stewardship within agrarian reform, this model bridges state agricultural policy with community-based religious institutions.",
+        "is_explicit": true
+      }
+    ],
+    "ai_confidence": 85,
+    "analyzed_at": "2026-05-25T09:39:30.278026"
+  }
+]

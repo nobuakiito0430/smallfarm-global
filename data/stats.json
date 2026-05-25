@@ -1,84 +1,86 @@
 {
   "total_projects": 16,
-  "total_countries": 25,
-  "total_beneficiaries": 124838000,
-  "total_beneficiaries_display": "1億2483万",
-  "avg_income_change_pct": 40,
-  "last_updated": "2025-05-25",
+  "total_countries": 8,
+  "total_beneficiaries": 125088000,
+  "total_beneficiaries_display": "1.3億",
+  "avg_income_change_pct": 41,
+  "total_papers": 6,
+  "total_news": 0,
+  "last_updated": "2026-05-25",
   "regions": {
-    "Sub-Saharan Africa": 9,
-    "South Asia": 2,
-    "Multiple": 5
+    "Sub-Saharan Africa": 8,
+    "Multiple": 6,
+    "South Asia": 2
   },
   "implementers": {
-    "JICA": 8,
+    "JICA": 9,
     "USAID": 1,
     "IFAD": 1,
     "World Bank": 1,
-    "FAO": 1,
-    "Cornell University / Various NGOs": 1,
     "M-Farm Ltd.": 1,
-    "Green Dreams TECH": 1
+    "Green Dreams TECH": 1,
+    "Cornell University / Various NGOs": 1,
+    "FAO": 1
   },
   "bottleneck_frequency": {
-    "scalability": 7,
-    "input_market": 5,
-    "market_access": 5,
+    "scalability": 6,
+    "knowledge_gap": 6,
     "institutional": 5,
-    "knowledge_gap": 5,
-    "climate_risk": 4,
+    "market_access": 5,
+    "input_market": 4,
+    "climate_risk": 3,
     "financial_access": 3,
-    "post_harvest": 3,
+    "post_harvest": 2,
     "gender": 1
   },
   "success_factor_frequency": {
-    "farmer_ownership": 8,
-    "institutional_integration": 6,
+    "farmer_ownership": 7,
     "market_linkage": 6,
-    "phased_scaleup": 4,
+    "institutional_integration": 5,
     "behavioral_change": 4,
-    "public_private": 4,
+    "phased_scaleup": 4,
     "ict_use": 4,
+    "public_private": 3,
     "gender_mainstream": 2
   },
   "approaches": {
-    "market-oriented": 6,
+    "market-oriented": 7,
     "value-chain": 4,
-    "digital": 2,
     "climate-smart": 3,
+    "digital": 2,
     "financial-inclusion": 1,
-    "cooperative": 1,
-    "input-market": 1
+    "input-market": 1,
+    "cooperative": 1
   },
   "timeline": [
     {
       "date": "2025-04-01",
       "title": "Bangla-SHEP データ更新",
-      "description": "バングラデシュ版SHEPの最新成果データを更新（所得40%増加、8000人参加）",
+      "description": "バングラデシュにおけるSHEPの適用。デルタ地帯特有の塩害・洪水リスクに対応しながら、多様なステークホルダーとの連携モデルを構築。...",
       "type": "update"
     },
     {
       "date": "2025-03-01",
-      "title": "SHEP PLUS 制度化の進捗",
-      "description": "ケニア47カウンティへの展開状況を更新。100万人以上の農家にアプローチ到達",
-      "type": "milestone"
+      "title": "SHEP PLUS データ更新",
+      "description": "SHEPアプローチのケニア全国農業普及システムへの制度化・スケールアップ。全47カウンティへの展開を目指し、政府の既存システムにSHEP手法を統合。...",
+      "type": "update"
     },
     {
       "date": "2025-02-15",
-      "title": "CARD Phase 2 中間評価",
-      "description": "アフリカ32カ国での稲作振興の中間評価結果を追加",
-      "type": "analysis"
+      "title": "CARD Phase 2 データ更新",
+      "description": "アフリカ稲作振興のための連合（CARD）フェーズ2。2030年までにサブサハラアフリカの稲作生産量倍増を目指す。改良品種、灌漑整備、市場開発を推進。...",
+      "type": "update"
     },
     {
       "date": "2025-02-10",
-      "title": "M-SHEP 気候適応分析",
-      "description": "マラウイでの気候脆弱性とSHEPアプローチの適応に関する分析を更新",
-      "type": "analysis"
+      "title": "M-SHEP データ更新",
+      "description": "マラウイにおけるSHEPアプローチの適用。内陸国特有の市場アクセス課題と気候脆弱性に対応した適応型モデル。...",
+      "type": "update"
     },
     {
       "date": "2025-01-20",
-      "title": "Feed the Future 年次報告",
-      "description": "USAID Feed the Futureの最新年次報告からデータを更新",
+      "title": "Feed the Future データ更新",
+      "description": "米国政府の世界的飢餓・食料安全保障イニシアティブ。19の重点国でバリューチェーン開発と栄養改善を推進。...",
       "type": "update"
     }
   ]
