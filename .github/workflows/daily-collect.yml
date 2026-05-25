@@ -1,0 +1,47 @@
+name: Daily Data Collection & AI Analysis
+
+on:
+  schedule:
+    # 毎朝6時（JST = UTC 21:00 前日）に実行
+    - cron: '0 21 * * *'
+  workflow_dispatch:  # 手動実行も可能
+
+permissions:
+  contents: write
+
+jobs:
+  collect-and-analyze:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Collect new articles and papers
+        run: python pipeline/collect.py
+        env:
+          OPENALEX_EMAIL: ${{ secrets.OPENALEX_EMAIL }}
+
+      - name: Analyze with Gemini API
+        run: python pipeline/analyze.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - name: Update statistics
+        run: python pipeline/update_stats.py
+
+      - name: Commit and push updated data
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "SmallFarm Global Bot"
+          git add data/
+          git diff --staged --quiet || git commit -m "🌾 Daily update: $(date +'%Y-%m-%d')"
+          git push

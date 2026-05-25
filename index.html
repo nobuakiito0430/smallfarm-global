@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmallFarm Global — 小規模農家商業化プロジェクト分析プラットフォーム</title>
+  <meta name="description" content="世界中の小規模農家の商業的農業化プロジェクトをAIが自動分析。ボトルネックと成功要因を横断的に可視化するダッシュボード。">
+  <meta name="keywords" content="smallholder, commercialization, JICA, SHEP, agriculture, development, AI analysis">
+
+  <!-- Favicons -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌾</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet.js -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <!-- Our styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo" id="logo">
+        <span class="logo-icon">🌾</span>
+        <span class="logo-text"><span>SmallFarm</span> Global</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#dashboard" class="active" data-section="dashboard">ダッシュボード</a></li>
+          <li><a href="#database" data-section="database">プロジェクトDB</a></li>
+          <li><a href="#bottleneck" data-section="bottleneck">ボトルネック分析</a></li>
+          <li><a href="#success" data-section="success">成功要因</a></li>
+          <li><a href="#compare" data-section="compare">比較ツール</a></li>
+          <li><a href="#research" data-section="research">最新リサーチ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-meta">
+        <div class="update-badge" id="update-badge">
+          <span class="pulse-dot"></span>
+          <span>AIが毎日自動更新</span>
+        </div>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== SECTION 1: DASHBOARD ===================== -->
+  <section id="dashboard" class="hero-offset">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header fade-in-up">
+        <h1>🌾 SmallFarm Global</h1>
+        <p>小規模農家の商業的農業化プロジェクトをAIが横断分析。ボトルネックと成功要因を可視化します。</p>
+      </div>
+
+      <!-- Stat Cards -->
+      <div class="stats-grid" id="stats-grid">
+        <div class="stat-card fade-in-up stagger-1">
+          <div class="stat-icon">📊</div>
+          <div class="stat-value" data-count="0" id="stat-projects">0</div>
+          <div class="stat-label">登録プロジェクト数</div>
+        </div>
+        <div class="stat-card fade-in-up stagger-2">
+          <div class="stat-icon">🌍</div>
+          <div class="stat-value" data-count="0" id="stat-countries">0</div>
+          <div class="stat-label">対象国数</div>
+        </div>
+        <div class="stat-card fade-in-up stagger-3">
+          <div class="stat-icon">👨‍🌾</div>
+          <div class="stat-value" data-count="0" data-suffix="万人" id="stat-beneficiaries">0</div>
+          <div class="stat-label">受益農家数</div>
+        </div>
+        <div class="stat-card fade-in-up stagger-4">
+          <div class="stat-icon">📈</div>
+          <div class="stat-value" data-count="0" data-prefix="+" data-suffix="%" id="stat-income">0</div>
+          <div class="stat-label">平均所得向上率</div>
+        </div>
+      </div>
+
+      <!-- Dashboard Grid: Map + Timeline -->
+      <div class="dashboard-grid">
+        <div class="glass-card fade-in-up">
+          <div class="card-title"><span class="icon">🗺️</span> プロジェクト分布</div>
+          <div class="map-container">
+            <div id="world-map"></div>
+          </div>
+        </div>
+
+        <div class="glass-card fade-in-up">
+          <div class="card-title"><span class="icon">🕐</span> 最新更新</div>
+          <div class="timeline" id="timeline">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 2: PROJECT DATABASE ===================== -->
+  <section id="database">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2>📁 プロジェクトデータベース</h2>
+        <p>世界中の小規模農家商業化プロジェクトを検索・フィルタリング</p>
+      </div>
+
+      <!-- Search & Filter -->
+      <div class="search-filter-bar fade-in-up">
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" class="search-input" id="search-input" placeholder="プロジェクト名、国名、キーワードで検索...">
+        </div>
+        <button class="filter-btn" id="filter-toggle-btn">
+          <span>⚙️</span> フィルター
+        </button>
+      </div>
+
+      <!-- Filter Panel -->
+      <div class="filter-panel" id="filter-panel">
+        <div class="filter-group">
+          <label for="filter-region">地域</label>
+          <select id="filter-region">
+            <option value="">すべて</option>
+            <option value="Sub-Saharan Africa">サブサハラアフリカ</option>
+            <option value="South Asia">南アジア</option>
+            <option value="Southeast Asia">東南アジア</option>
+            <option value="Latin America">ラテンアメリカ</option>
+            <option value="MENA">中東・北アフリカ</option>
+            <option value="Other">その他</option>
+            <option value="Multiple">複数地域</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-approach">アプローチ</label>
+          <select id="filter-approach">
+            <option value="">すべて</option>
+            <option value="market-oriented">市場志向型</option>
+            <option value="value-chain">バリューチェーン</option>
+            <option value="input-market">投入市場改革</option>
+            <option value="climate-smart">気候スマート農業</option>
+            <option value="digital">デジタル農業</option>
+            <option value="financial-inclusion">金融包摂</option>
+            <option value="cooperative">協同組合</option>
+            <option value="nutrition">栄養改善</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-implementer">実施機関</label>
+          <select id="filter-implementer">
+            <option value="">すべて</option>
+            <!-- Populated by JS -->
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-climate">気候変動関連度</label>
+          <select id="filter-climate">
+            <option value="">すべて</option>
+            <option value="high">高</option>
+            <option value="medium">中</option>
+            <option value="low">低</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-status">状態</label>
+          <select id="filter-status">
+            <option value="">すべて</option>
+            <option value="active">実施中</option>
+            <option value="completed">完了</option>
+            <option value="ongoing">進行中</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Active Filters -->
+      <div class="active-filters" id="active-filters"></div>
+
+      <!-- Result Count -->
+      <div class="result-count fade-in-up" id="result-count"></div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projects-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 3: BOTTLENECK ANALYSIS ===================== -->
+  <section id="bottleneck">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2>⚠️ ボトルネック分析</h2>
+        <p>全プロジェクト横断で、小規模農家商業化の共通障壁を可視化</p>
+      </div>
+
+      <div class="analysis-grid fade-in-up">
+        <div class="glass-card">
+          <div class="card-title"><span class="icon">📊</span> ボトルネック頻度</div>
+          <div class="chart-container">
+            <canvas id="bottleneck-bar-chart"></canvas>
+          </div>
+        </div>
+        <div class="glass-card">
+          <div class="card-title"><span class="icon">🎯</span> 地域別ボトルネック</div>
+          <div class="chart-container">
+            <canvas id="bottleneck-radar-chart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card fade-in-up" style="margin-top: 24px;">
+        <div class="card-title"><span class="icon">🔥</span> ボトルネック × 地域 ヒートマップ</div>
+        <div class="chart-container" style="min-height: 400px;">
+          <canvas id="bottleneck-heatmap"></canvas>
+        </div>
+      </div>
+
+      <div class="bottleneck-cards fade-in-up" id="bottleneck-cards">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 4: SUCCESS FACTORS ===================== -->
+  <section id="success">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2>✅ 成功要因分析</h2>
+        <p>プロジェクト横断で特定された成功パターンと成功要因</p>
+      </div>
+
+      <div class="analysis-grid fade-in-up">
+        <div class="glass-card">
+          <div class="card-title"><span class="icon">📊</span> 成功要因の頻度</div>
+          <div class="chart-container">
+            <canvas id="success-bar-chart"></canvas>
+          </div>
+        </div>
+        <div class="glass-card">
+          <div class="card-title"><span class="icon">🏆</span> 成功要因 × アプローチ</div>
+          <div class="chart-container">
+            <canvas id="success-radar-chart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="success-cards fade-in-up" id="success-cards">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 5: COMPARISON TOOL ===================== -->
+  <section id="compare">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2>🔄 比較ツール</h2>
+        <p>プロジェクトを並列比較し、違いと共通点を分析</p>
+      </div>
+
+      <div class="compare-selector fade-in-up" id="compare-selector">
+        <div class="compare-slot" id="compare-slot-0">+ プロジェクト選択</div>
+        <div class="compare-slot" id="compare-slot-1">+ プロジェクト選択</div>
+        <div class="compare-slot" id="compare-slot-2">+ プロジェクト選択</div>
+        <div class="compare-slot" id="compare-slot-3">+ プロジェクト選択</div>
+      </div>
+
+      <div id="comparison-content">
+        <div class="empty-compare fade-in-up">
+          <p style="font-size: 2rem; margin-bottom: 12px;">📊</p>
+          <p>プロジェクトDBから「比較に追加」を押すか、上のスロットをクリックして選択</p>
+        </div>
+      </div>
+
+      <div class="glass-card fade-in-up" id="comparison-radar-container" style="margin-top: 24px; display: none;">
+        <div class="card-title"><span class="icon">🎯</span> レーダーチャート比較</div>
+        <div class="chart-container">
+          <canvas id="comparison-radar-chart"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 6: LATEST RESEARCH ===================== -->
+  <section id="research">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2>📚 最新リサーチ</h2>
+        <p>AIが分析した最新の論文・ニュース（直近30日）</p>
+      </div>
+
+      <div class="research-tabs fade-in-up" id="research-tabs">
+        <button class="research-tab active" data-tab="papers">📄 論文</button>
+        <button class="research-tab" data-tab="news">📰 ニュース</button>
+      </div>
+
+      <div class="research-grid" id="research-grid">
+        <!-- Populated by JS -->
+      </div>
+
+      <div class="no-results" id="research-empty" style="display: none;">
+        <div class="icon">📡</div>
+        <h3>データを収集中...</h3>
+        <p>GitHub Actionsによる自動収集が開始されると、ここにAI分析済みの最新記事が表示されます。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-icon">🌾</span>
+          <span class="logo-text"><span>SmallFarm</span> Global</span>
+        </div>
+        <p>世界中の小規模農家商業化プロジェクトを横断分析するAI搭載プラットフォーム。JICAインターンシップ業務支援ツールとして開発。</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>ナビゲーション</h4>
+        <ul>
+          <li><a href="#dashboard">ダッシュボード</a></li>
+          <li><a href="#database">プロジェクトDB</a></li>
+          <li><a href="#bottleneck">ボトルネック分析</a></li>
+          <li><a href="#success">成功要因</a></li>
+          <li><a href="#compare">比較ツール</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>データソース</h4>
+        <ul>
+          <li><a href="https://openalex.org/" target="_blank" rel="noopener">OpenAlex</a></li>
+          <li><a href="https://www.jica.go.jp/" target="_blank" rel="noopener">JICA</a></li>
+          <li><a href="https://www.fao.org/" target="_blank" rel="noopener">FAO</a></li>
+          <li><a href="https://www.worldbank.org/" target="_blank" rel="noopener">World Bank</a></li>
+          <li><a href="https://www.ifad.org/" target="_blank" rel="noopener">IFAD</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>リンク</h4>
+        <ul>
+          <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.jica.go.jp/english/our_work/thematic_issues/agricultural/shep/" target="_blank" rel="noopener">SHEP公式</a></li>
+          <li><a href="https://aistudio.google.com/" target="_blank" rel="noopener">Gemini AI</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 SmallFarm Global. Built for JICA Internship.</span>
+      <span id="footer-last-update">最終更新: 読み込み中...</span>
+    </div>
+  </footer>
+
+  <!-- ===================== MODAL ===================== -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="project-modal">
+      <div class="modal-header">
+        <div>
+          <h3 id="modal-title"></h3>
+          <div id="modal-status" style="margin-top: 8px;"></div>
+        </div>
+        <button class="modal-close" id="modal-close" aria-label="閉じる">✕</button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== COMPARE PROJECT SELECTOR MODAL ===================== -->
+  <div class="modal-overlay" id="compare-modal-overlay">
+    <div class="modal" id="compare-modal" style="max-width: 600px;">
+      <div class="modal-header">
+        <h3>プロジェクトを選択</h3>
+        <button class="modal-close" id="compare-modal-close" aria-label="閉じる">✕</button>
+      </div>
+      <div class="modal-body" id="compare-modal-body">
+        <div class="search-input-wrapper" style="margin-bottom: 16px;">
+          <span class="search-icon">🔍</span>
+          <input type="text" class="search-input" id="compare-search" placeholder="プロジェクト名で検索...">
+        </div>
+        <div id="compare-project-list" style="max-height: 400px; overflow-y: auto;">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="charts.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

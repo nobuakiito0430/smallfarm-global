@@ -1,0 +1,861 @@
+[
+  {
+    "id": "shep-phase1",
+    "name": "SHEP Phase 1",
+    "name_ja": "SHEP フェーズ1",
+    "country": ["Kenya"],
+    "country_ja": ["ケニア"],
+    "region": "Sub-Saharan Africa",
+    "flag": "🇰🇪",
+    "implementer": "JICA",
+    "start_year": 2006,
+    "end_year": 2009,
+    "status": "completed",
+    "approach": ["market-oriented"],
+    "approach_ja": ["市場志向型"],
+    "target_crops": ["Horticulture", "Vegetables", "Fruits"],
+    "climate_relevance": "medium",
+    "description_en": "Smallholder Horticulture Empowerment & Promotion (SHEP) project in Kenya. Pioneered the market-oriented approach where farmers conduct market surveys before deciding what to grow, shifting from 'grow and sell' to 'grow to sell'.",
+    "description_ja": "ケニアにおける小規模園芸農家エンパワメント・促進プロジェクト。農家が栽培前に市場調査を行う「作って売る」から「売るために作る」への転換を先導。自己決定理論（SDT）に基づく行動変容アプローチを採用。",
+    "outcomes": {
+      "income_change_pct": 70,
+      "participants": 1200,
+      "beneficiaries_total": 3000,
+      "key_result": "参加農家の園芸所得が平均70%増加、市場志向型農業の有効性を実証"
+    },
+    "bottlenecks": [
+      {
+        "category": "input_market",
+        "description": "種子・苗の品質が不安定で、農家が信頼できる投入材にアクセスしにくい状況があった",
+        "severity": "medium"
+      },
+      {
+        "category": "scalability",
+        "description": "パイロット地域から他地域への展開において、普及員の質と量の確保が課題",
+        "severity": "high"
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "farmer_ownership",
+        "description": "農家自身が市場調査を実施し、何を栽培するか自律的に決定する仕組みを構築"
+      },
+      {
+        "category": "behavioral_change",
+        "description": "自己決定理論（SDT）に基づき、農家の内発的動機づけを重視したアプローチ"
+      },
+      {
+        "category": "market_linkage",
+        "description": "農家と市場関係者の直接対話の場を設け、市場ニーズの理解を促進"
+      }
+    ],
+    "tags": ["market-survey", "SDT", "horticulture", "TICAD", "behavior-change", "Kenya"],
+    "source_url": "https://www.jica.go.jp/english/our_work/thematic_issues/agricultural/shep/",
+    "ai_confidence": 95,
+    "last_updated": "2025-01-15",
+    "coordinates": { "lat": -1.2921, "lng": 36.8219 }
+  },
+  {
+    "id": "shep-plus",
+    "name": "SHEP PLUS",
+    "name_ja": "SHEP PLUS（制度化フェーズ）",
+    "country": ["Kenya"],
+    "country_ja": ["ケニア"],
+    "region": "Sub-Saharan Africa",
+    "flag": "🇰🇪",
+    "implementer": "JICA",
+    "start_year": 2015,
+    "end_year": null,
+    "status": "active",
+    "approach": ["market-oriented"],
+    "approach_ja": ["市場志向型", "制度化"],
+    "target_crops": ["Horticulture", "Vegetables", "Fruits"],
+    "climate_relevance": "medium",
+    "description_en": "Scale-up and institutionalization of the SHEP approach within Kenya's national agricultural extension system. Aims to mainstream the market-oriented approach across all 47 counties.",
+    "description_ja": "SHEPアプローチのケニア全国農業普及システムへの制度化・スケールアップ。全47カウンティへの展開を目指し、政府の既存システムにSHEP手法を統合。",
+    "outcomes": {
+      "income_change_pct": 65,
+      "participants": 200000,
+      "beneficiaries_total": 1000000,
+      "key_result": "100万人以上の農家にSHEPアプローチが到達、国家農業普及戦略に統合"
+    },
+    "bottlenecks": [
+      {
+        "category": "scalability",
+        "description": "47カウンティへの均質な展開が困難で、地域差が大きい",
+        "severity": "high"
+      },
+      {
+        "category": "institutional",
+        "description": "カウンティ政府の実施能力にばらつきがあり、予算配分も不安定",
+        "severity": "medium"
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "institutional_integration",
+        "description": "ケニア政府の国家農業普及戦略にSHEPアプローチを正式に組み込むことに成功"
+      },
+      {
+        "category": "phased_scaleup",
+        "description": "パイロット→実証→制度化の段階的スケールアップモデルが効果的に機能"
+      },
+      {
+        "category": "farmer_ownership",
+        "description": "農家の自律性を重視する理念を制度化段階でも維持"
+      }
+    ],
+    "tags": ["institutionalization", "scale-up", "national-system", "SDT", "TICAD"],
+    "source_url": "https://www.jica.go.jp/english/our_work/thematic_issues/agricultural/shep/",
+    "ai_confidence": 93,
+    "last_updated": "2025-03-01",
+    "coordinates": { "lat": -1.2921, "lng": 36.8219 }
+  },
+  {
+    "id": "tanshep",
+    "name": "TANSHEP",
+    "name_ja": "TANSHEP（タンザニア版SHEP）",
+    "country": ["Tanzania"],
+    "country_ja": ["タンザニア"],
+    "region": "Sub-Saharan Africa",
+    "flag": "🇹🇿",
+    "implementer": "JICA",
+    "start_year": 2014,
+    "end_year": 2019,
+    "status": "completed",
+    "approach": ["market-oriented"],
+    "approach_ja": ["市場志向型", "消費者啓発"],
+    "target_crops": ["Horticulture", "Vegetables"],
+    "climate_relevance": "medium",
+    "description_en": "Tanzania Smallholder Horticulture Empowerment & Promotion project. Adapted the SHEP model with consumer awareness campaigns to create local demand for fresh vegetables.",
+    "description_ja": "タンザニアにおけるSHEPの応用。消費者啓発キャンペーンを組み合わせ、新鮮野菜の国内需要喚起を同時に実施した特徴的なモデル。",
+    "outcomes": {
+      "income_change_pct": 55,
+      "participants": 5000,
+      "beneficiaries_total": 15000,
+      "key_result": "参加農家の所得55%増加、消費者啓発により国内野菜需要が拡大"
+    },
+    "bottlenecks": [
+      {
+        "category": "market_access",
+        "description": "農村部からの物理的なアクセスが困難で、道路インフラが不十分",
+        "severity": "high"
+      },
+      {
+        "category": "post_harvest",
+        "description": "冷蔵・貯蔵施設が不足し、収穫後の品質劣化によるロスが大きい",
+        "severity": "medium"
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "behavioral_change",
+        "description": "消費者啓発と農家支援を同時展開する需要・供給両面アプローチ"
+      },
+      {
+        "category": "market_linkage",
+        "description": "農家と小売業者・消費者の直接的な接点を創出"
+      }
+    ],
+    "tags": ["consumer-awareness", "demand-creation", "Tanzania", "horticulture"],
+    "source_url": "https://www.jica.go.jp/",
+    "ai_confidence": 88,
+    "last_updated": "2024-11-20",
+    "coordinates": { "lat": -6.7924, "lng": 39.2083 }
+  },
+  {
+    "id": "m-shep",
+    "name": "M-SHEP",
+    "name_ja": "M-SHEP（マラウイ版SHEP）",
+    "country": ["Malawi"],
+    "country_ja": ["マラウイ"],
+    "region": "Sub-Saharan Africa",
+    "flag": "🇲🇼",
+    "implementer": "JICA",
+    "start_year": 2017,
+    "end_year": null,
+    "status": "active",
+    "approach": ["market-oriented"],
+    "approach_ja": ["市場志向型"],
+    "target_crops": ["Horticulture", "Groundnuts", "Soybeans"],
+    "climate_relevance": "high",
+    "description_en": "Malawi SHEP adapts the market-oriented approach to a landlocked country context with challenges in input market reliability and climate vulnerability.",
+    "description_ja": "マラウイにおけるSHEPアプローチの適用。内陸国特有の市場アクセス課題と気候脆弱性に対応した適応型モデル。",
+    "outcomes": {
+      "income_change_pct": 45,
+      "participants": 3000,
+      "beneficiaries_total": 10000,
+      "key_result": "参加農家の所得45%増加、気候脆弱な地域での市場志向型農業の適用可能性を実証"
+    },
+    "bottlenecks": [
+      {
+        "category": "input_market",
+        "description": "種子・肥料の偽装品問題が深刻で、農家が正規品にアクセスできない",
+        "severity": "high"
+      },
+      {
+        "category": "climate_risk",
+        "description": "干ばつとエルニーニョの影響で、園芸作物の生産が不安定",
+        "severity": "high"
+      },
+      {
+        "category": "market_access",
+        "description": "内陸国のため輸出市場へのアクセスコストが高い",
+        "severity": "medium"
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "farmer_ownership",
+        "description": "農家グループが自主的に市場調査を実施し、栽培計画を策定"
+      },
+      {
+        "category": "gender_mainstream",
+        "description": "女性農家のリーダーシップ促進を制度的に組み込み、参加率50%以上を達成"
+      }
+    ],
+    "tags": ["landlocked", "climate-vulnerability", "gender", "Malawi"],
+    "source_url": "https://www.jica.go.jp/",
+    "ai_confidence": 85,
+    "last_updated": "2025-02-10",
+    "coordinates": { "lat": -13.9626, "lng": 33.7741 }
+  },
+  {
+    "id": "bangla-shep",
+    "name": "Bangla-SHEP",
+    "name_ja": "Bangla-SHEP（バングラデシュ版SHEP）",
+    "country": ["Bangladesh"],
+    "country_ja": ["バングラデシュ"],
+    "region": "South Asia",
+    "flag": "🇧🇩",
+    "implementer": "JICA",
+    "start_year": 2019,
+    "end_year": null,
+    "status": "active",
+    "approach": ["market-oriented"],
+    "approach_ja": ["市場志向型", "マルチステークホルダー"],
+    "target_crops": ["Vegetables", "Rice", "Jute"],
+    "climate_relevance": "high",
+    "description_en": "Bangladesh adaptation of SHEP with multi-stakeholder approach, addressing unique challenges of delta geography, salinity intrusion, and dense population.",
+    "description_ja": "バングラデシュにおけるSHEPの適用。デルタ地帯特有の塩害・洪水リスクに対応しながら、多様なステークホルダーとの連携モデルを構築。",
+    "outcomes": {
+      "income_change_pct": 40,
+      "participants": 8000,
+      "beneficiaries_total": 25000,
+      "key_result": "塩害地域での高付加価値野菜栽培モデルの確立、マルチステークホルダー連携の有効性を実証"
+    },
+    "bottlenecks": [
+      {
+        "category": "climate_risk",
+        "description": "サイクロン・洪水・塩害の三重リスクにより、栽培計画の策定が困難",
+        "severity": "high"
+      },
+      {
+        "category": "financial_access",
+        "description": "小規模農家への農業融資が限定的で、投資資金の確保が困難",
+        "severity": "medium"
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "public_private",
+        "description": "農業普及局（DAE）、NGO、民間企業のマルチステークホルダー連携"
+      },
+      {
+        "category": "farmer_ownership",
+        "description": "地域の農家リーダーがファシリテーターとなり、自律的な学習グループを形成"
+      }
+    ],
+    "tags": ["delta", "salinity", "multi-stakeholder", "Bangladesh", "climate-adaptation"],
+    "source_url": "https://www.jica.go.jp/",
+    "ai_confidence": 87,
+    "last_updated": "2025-04-01",
+    "coordinates": { "lat": 23.8103, "lng": 90.4125 }
+  },
+  {
+    "id": "ovop",
+    "name": "OVOP (One Village One Product)",
+    "name_ja": "一村一品運動（OVOP）",
+    "country": ["Malawi", "Thailand", "Uganda", "Ethiopia"],
+    "country_ja": ["マラウイ", "タイ", "ウガンダ", "エチオピア"],
+    "region": "Multiple",
+    "flag": "🌍",
+    "implementer": "JICA",
+    "start_year": 2003,
+    "end_year": null,
+    "status": "active",
+    "approach": ["market-oriented", "value-chain"],
+    "approach_ja": ["市場志向型", "地場産品振興"],
+    "target_crops": ["Coffee", "Macadamia", "Honey", "Various"],
+    "climate_relevance": "low",
+    "description_en": "One Village One Product movement promoting local specialties with market orientation, originating from Japan's Oita Prefecture model and adapted to developing countries.",
+    "description_ja": "大分県発の一村一品運動をアフリカ等の途上国に適用。各村の特産品を発掘・ブランド化し、市場アクセスを改善するアプローチ。",
+    "outcomes": {
+      "income_change_pct": 35,
+      "participants": 50000,
+      "beneficiaries_total": 200000,
+      "key_result": "マラウイで200以上の地場産品がブランド化、農家の市場アクセスが改善"
+    },
+    "bottlenecks": [
+      {
+        "category": "market_access",
+        "description": "地方の特産品を都市部・輸出市場に効果的に届けるロジスティクスが不足",
+        "severity": "high"
+      },
+      {
+        "category": "knowledge_gap",
+        "description": "品質管理・パッケージング・ブランディングのスキルが不足",
+        "severity": "medium"
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "farmer_ownership",
+        "description": "各コミュニティが自らの強みを発見し、特産品を選定するボトムアップ方式"
+      },
+      {
+        "category": "market_linkage",
+        "description": "見本市・展示会を通じた市場関係者との直接的なマッチング"
+      }
+    ],
+    "tags": ["local-specialty", "branding", "bottom-up", "Oita-model", "value-addition"],
+    "source_url": "https://www.jica.go.jp/",
+    "ai_confidence": 82,
+    "last_updated": "2024-12-15",
+    "coordinates": { "lat": -13.9626, "lng": 33.7741 }
+  },
+  {
+    "id": "feed-the-future",
+    "name": "Feed the Future",
+    "name_ja": "Feed the Future",
+    "country": ["Multiple"],
+    "country_ja": ["複数国（19カ国）"],
+    "region": "Multiple",
+    "flag": "🇺🇸",
+    "implementer": "USAID",
+    "start_year": 2010,
+    "end_year": null,
+    "status": "active",
+    "approach": ["value-chain"],
+    "approach_ja": ["バリューチェーン開発"],
+    "target_crops": ["Various"],
+    "climate_relevance": "high",
+    "description_en": "U.S. government's global hunger and food security initiative, operating in 19 focus countries with emphasis on agricultural value chain development and nutrition.",
+    "description_ja": "米国政府の世界的飢餓・食料安全保障イニシアティブ。19の重点国でバリューチェーン開発と栄養改善を推進。",
+    "outcomes": {
+      "income_change_pct": 25,
+      "participants": 23000000,
+      "beneficiaries_total": 50000000,
+      "key_result": "2300万人以上の農家・起業家の生産性向上、極度の貧困が大幅に減少"
+    },
+    "bottlenecks": [
+      {
+        "category": "institutional",
+        "description": "各国政府の政策環境・実施能力にばらつきがあり、統一的な成果測定が困難",
+        "severity": "medium"
+      },
+      {
+        "category": "scalability",
+        "description": "成功事例の他国・他地域への横展開にコストと時間がかかる",
+        "severity": "medium"
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "public_private",
+        "description": "政府・民間企業・NGOの大規模な連携フレームワーク"
+      },
+      {
+        "category": "institutional_integration",
+        "description": "各国政府の農業政策に統合し、オーナーシップを確保"
+      }
+    ],
+    "tags": ["USAID", "food-security", "value-chain", "nutrition", "global"],
+    "source_url": "https://www.feedthefuture.gov/",
+    "ai_confidence": 90,
+    "last_updated": "2025-01-20",
+    "coordinates": { "lat": 9.145, "lng": 40.4897 }
+  },
+  {
+    "id": "ifad-rural-enterprise",
+    "name": "IFAD Rural Enterprise Programme",
+    "name_ja": "IFAD農村企業プログラム",
+    "country": ["Multiple"],
+    "country_ja": ["複数国"],
+    "region": "Multiple",
+    "flag": "🌍",
+    "implementer": "IFAD",
+    "start_year": 2010,
+    "end_year": null,
+    "status": "active",
+    "approach": ["financial-inclusion", "value-chain"],
+    "approach_ja": ["金融包摂", "市場アクセス"],
+    "target_crops": ["Various"],
+    "climate_relevance": "medium",
+    "description_en": "IFAD's programs supporting rural small enterprises through microfinance, market access improvements, and agricultural value chain development in developing countries.",
+    "description_ja": "IFADの農村小規模企業支援プログラム。マイクロファイナンス、市場アクセス改善、農業バリューチェーン開発を統合的に支援。",
+    "outcomes": {
+      "income_change_pct": 30,
+      "participants": 5000000,
+      "beneficiaries_total": 15000000,
+      "key_result": "500万人以上の農村起業家への金融アクセス改善、農村金融市場の活性化"
+    },
+    "bottlenecks": [
+      {
+        "category": "financial_access",
+        "description": "既存の金融制度が農村部をカバーしきれず、担保要件が小規模農家に合わない",
+        "severity": "high"
+      },
+      {
+        "category": "knowledge_gap",
+        "description": "金融リテラシーの不足が、融資の活用効率を低下させている",
+        "severity": "medium"
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "market_linkage",
+        "description": "農産物の買い手と生産者の直接契約を促進するマーケットプラットフォーム"
+      },
+      {
+        "category": "gender_mainstream",
+        "description": "女性農村起業家への特別融資枠と研修プログラムの設計"
+      }
+    ],
+    "tags": ["microfinance", "rural-enterprise", "market-access", "gender"],
+    "source_url": "https://www.ifad.org/",
+    "ai_confidence": 84,
+    "last_updated": "2024-10-30",
+    "coordinates": { "lat": 1.3733, "lng": 32.2903 }
+  },
+  {
+    "id": "wb-seed-reform",
+    "name": "World Bank Seed System Reform",
+    "name_ja": "世界銀行 種子制度改革",
+    "country": ["Multiple"],
+    "country_ja": ["複数国"],
+    "region": "Multiple",
+    "flag": "🌍",
+    "implementer": "World Bank",
+    "start_year": 2012,
+    "end_year": null,
+    "status": "active",
+    "approach": ["input-market"],
+    "approach_ja": ["投入市場改革"],
+    "target_crops": ["Rice", "Maize", "Wheat", "Vegetables"],
+    "climate_relevance": "medium",
+    "description_en": "World Bank initiatives to reform seed systems in developing countries, addressing counterfeit seeds, quality certification, and private sector engagement in seed production.",
+    "description_ja": "途上国の種子制度を改革する世界銀行のイニシアティブ。偽装種子対策、品質認証制度の整備、民間種子企業の参入促進を推進。",
+    "outcomes": {
+      "income_change_pct": 20,
+      "participants": 3000000,
+      "beneficiaries_total": 10000000,
+      "key_result": "対象国での認証種子使用率が30%向上、種子品質に関する規制フレームワークの整備"
+    },
+    "bottlenecks": [
+      {
+        "category": "input_market",
+        "description": "偽装種子が市場の30-40%を占め、農家の信頼を損なっている",
+        "severity": "high"
+      },
+      {
+        "category": "institutional",
+        "description": "種子認証機関の人的・財政的リソースが不足し、監査能力が限定的",
+        "severity": "high"
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "public_private",
+        "description": "民間種子企業の参入を促進する規制環境の整備と官民対話"
+      },
+      {
+        "category": "ict_use",
+        "description": "QRコード・モバイル認証による種子トレーサビリティシステムの導入"
+      }
+    ],
+    "tags": ["seed-system", "counterfeit", "quality-certification", "input-market"],
+    "source_url": "https://www.worldbank.org/en/topic/agriculture",
+    "ai_confidence": 83,
+    "last_updated": "2024-11-15",
+    "coordinates": { "lat": 9.082, "lng": 8.6753 }
+  },
+  {
+    "id": "m-farm",
+    "name": "M-Farm",
+    "name_ja": "M-Farm",
+    "country": ["Kenya"],
+    "country_ja": ["ケニア"],
+    "region": "Sub-Saharan Africa",
+    "flag": "🇰🇪",
+    "implementer": "M-Farm Ltd.",
+    "start_year": 2010,
+    "end_year": null,
+    "status": "active",
+    "approach": ["digital"],
+    "approach_ja": ["デジタル農業"],
+    "target_crops": ["Various"],
+    "climate_relevance": "low",
+    "description_en": "Mobile-based platform providing real-time market prices, collective selling, and input purchasing for smallholder farmers in Kenya.",
+    "description_ja": "ケニアの小規模農家にリアルタイム市場価格情報、共同販売、投入材共同購入機能を提供するモバイルプラットフォーム。",
+    "outcomes": {
+      "income_change_pct": 30,
+      "participants": 50000,
+      "beneficiaries_total": 50000,
+      "key_result": "農家の市場価格情報アクセスが劇的に改善、仲介業者への依存が軽減"
+    },
+    "bottlenecks": [
+      {
+        "category": "knowledge_gap",
+        "description": "デジタルリテラシーが低い農家のプラットフォーム活用が限定的",
+        "severity": "medium"
+      },
+      {
+        "category": "scalability",
+        "description": "モバイルネットワークのカバレッジが不十分な農村地域への展開が困難",
+        "severity": "medium"
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "ict_use",
+        "description": "SMSベースの簡易インターフェースにより、スマートフォン不要で利用可能"
+      },
+      {
+        "category": "market_linkage",
+        "description": "農家グループの共同販売により、交渉力と取引規模を向上"
+      }
+    ],
+    "tags": ["mobile", "market-price", "digital", "collective-selling", "Kenya"],
+    "source_url": "https://www.mfarm.co.ke/",
+    "ai_confidence": 80,
+    "last_updated": "2024-09-20",
+    "coordinates": { "lat": -1.2921, "lng": 36.8219 }
+  },
+  {
+    "id": "icow",
+    "name": "iCow",
+    "name_ja": "iCow",
+    "country": ["Kenya"],
+    "country_ja": ["ケニア"],
+    "region": "Sub-Saharan Africa",
+    "flag": "🇰🇪",
+    "implementer": "Green Dreams TECH",
+    "start_year": 2011,
+    "end_year": null,
+    "status": "active",
+    "approach": ["digital"],
+    "approach_ja": ["デジタル畜産"],
+    "target_crops": ["Dairy"],
+    "climate_relevance": "low",
+    "description_en": "Mobile application helping smallholder dairy farmers improve milk production through breeding advice, veterinary tips, and market price information.",
+    "description_ja": "小規模酪農家の牛乳生産向上を支援するモバイルアプリ。繁殖管理、獣医アドバイス、市場価格情報を提供。",
+    "outcomes": {
+      "income_change_pct": 42,
+      "participants": 700000,
+      "beneficiaries_total": 700000,
+      "key_result": "登録農家70万人、牛乳生産量の大幅な改善と農家所得の42%増加"
+    },
+    "bottlenecks": [
+      {
+        "category": "knowledge_gap",
+        "description": "一部農家がアプリの推奨内容を十分に理解・実践できていない",
+        "severity": "low"
+      },
+      {
+        "category": "financial_access",
+        "description": "推奨される改良品種の導入に必要な初期投資が農家の負担になる",
+        "severity": "medium"
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "ict_use",
+        "description": "SNS型のユーザーインターフェースで農家同士の知識共有を促進"
+      },
+      {
+        "category": "behavioral_change",
+        "description": "ゲーミフィケーション要素により、農家の継続的な利用と学習を促進"
+      }
+    ],
+    "tags": ["dairy", "mobile-app", "breeding", "veterinary", "ICT", "Kenya"],
+    "source_url": "https://www.icow.co.ke/",
+    "ai_confidence": 79,
+    "last_updated": "2024-10-05",
+    "coordinates": { "lat": -0.0236, "lng": 37.9062 }
+  },
+  {
+    "id": "ethiopia-csa",
+    "name": "Ethiopia Climate Smart Agriculture",
+    "name_ja": "エチオピア気候スマート農業プロジェクト",
+    "country": ["Ethiopia"],
+    "country_ja": ["エチオピア"],
+    "region": "Sub-Saharan Africa",
+    "flag": "🇪🇹",
+    "implementer": "JICA",
+    "start_year": 2018,
+    "end_year": null,
+    "status": "active",
+    "approach": ["climate-smart"],
+    "approach_ja": ["気候スマート農業"],
+    "target_crops": ["Coffee", "Teff", "Wheat", "Vegetables"],
+    "climate_relevance": "high",
+    "description_en": "JICA's climate-smart agriculture project in Ethiopia, introducing drought-resistant varieties, water harvesting techniques, and climate-adaptive farming practices.",
+    "description_ja": "エチオピアにおけるJICAの気候スマート農業プロジェクト。干ばつ耐性品種、雨水集水技術、気候適応型農法を導入。",
+    "outcomes": {
+      "income_change_pct": 35,
+      "participants": 15000,
+      "beneficiaries_total": 50000,
+      "key_result": "干ばつ影響地域での作物収量30%向上、農家の気候適応力の強化"
+    },
+    "bottlenecks": [
+      {
+        "category": "climate_risk",
+        "description": "気候変動による降水パターンの変化が予測困難で、適応戦略の策定が難しい",
+        "severity": "high"
+      },
+      {
+        "category": "input_market",
+        "description": "干ばつ耐性品種の種子供給が限定的で、農家のアクセスが不十分",
+        "severity": "medium"
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "phased_scaleup",
+        "description": "モデル農場→デモンストレーション→広域展開の段階的アプローチ"
+      },
+      {
+        "category": "institutional_integration",
+        "description": "エチオピア政府の気候変動対応戦略（CRGE）との連携・統合"
+      }
+    ],
+    "tags": ["climate-smart", "drought-resistant", "water-harvesting", "Ethiopia", "CRGE"],
+    "source_url": "https://www.jica.go.jp/",
+    "ai_confidence": 86,
+    "last_updated": "2025-01-10",
+    "coordinates": { "lat": 9.145, "lng": 40.4897 }
+  },
+  {
+    "id": "card-phase2",
+    "name": "CARD Phase 2",
+    "name_ja": "CARD フェーズ2（アフリカ稲作振興）",
+    "country": ["Multiple"],
+    "country_ja": ["アフリカ32カ国"],
+    "region": "Sub-Saharan Africa",
+    "flag": "🌍",
+    "implementer": "JICA",
+    "start_year": 2019,
+    "end_year": 2030,
+    "status": "active",
+    "approach": ["value-chain"],
+    "approach_ja": ["稲作振興", "バリューチェーン"],
+    "target_crops": ["Rice"],
+    "climate_relevance": "medium",
+    "description_en": "Coalition for African Rice Development Phase 2, aiming to double rice production in Sub-Saharan Africa by 2030 through improved varieties, irrigation, and market development.",
+    "description_ja": "アフリカ稲作振興のための連合（CARD）フェーズ2。2030年までにサブサハラアフリカの稲作生産量倍増を目指す。改良品種、灌漑整備、市場開発を推進。",
+    "outcomes": {
+      "income_change_pct": 25,
+      "participants": 2000000,
+      "beneficiaries_total": 8000000,
+      "key_result": "参加国の稲作生産性30%向上、NERICAなど改良品種の普及率拡大"
+    },
+    "bottlenecks": [
+      {
+        "category": "institutional",
+        "description": "32カ国の政策環境が多様で、統一的なアプローチの適用が困難",
+        "severity": "high"
+      },
+      {
+        "category": "post_harvest",
+        "description": "精米・貯蔵施設の不足により、品質の低い輸入米との競争で不利",
+        "severity": "medium"
+      },
+      {
+        "category": "market_access",
+        "description": "国産米の品質・価格が輸入米と競争できず、市場シェア獲得が困難",
+        "severity": "medium"
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "institutional_integration",
+        "description": "各国のNational Rice Development Strategy（NRDS）への統合"
+      },
+      {
+        "category": "phased_scaleup",
+        "description": "研究→実証→普及の段階的なスケールアップメカニズム"
+      }
+    ],
+    "tags": ["rice", "NERICA", "Africa", "CARD", "food-security", "TICAD"],
+    "source_url": "https://www.jica.go.jp/",
+    "ai_confidence": 88,
+    "last_updated": "2025-02-15",
+    "coordinates": { "lat": -1.9403, "lng": 29.8739 }
+  },
+  {
+    "id": "sri",
+    "name": "System of Rice Intensification (SRI)",
+    "name_ja": "SRI（稲作強化法）",
+    "country": ["Multiple"],
+    "country_ja": ["複数国（50カ国以上）"],
+    "region": "Multiple",
+    "flag": "🌍",
+    "implementer": "Cornell University / Various NGOs",
+    "start_year": 1983,
+    "end_year": null,
+    "status": "active",
+    "approach": ["climate-smart"],
+    "approach_ja": ["稲作効率化", "気候スマート農業"],
+    "target_crops": ["Rice"],
+    "climate_relevance": "high",
+    "description_en": "Alternative rice farming methodology that increases yields while reducing water use, seed requirements, and chemical inputs through optimized plant management.",
+    "description_ja": "水使用量・種子量・化学肥料投入を削減しながら収量を向上させる代替稲作農法。50カ国以上で採用。",
+    "outcomes": {
+      "income_change_pct": 50,
+      "participants": 10000000,
+      "beneficiaries_total": 20000000,
+      "key_result": "平均20-50%の収量増加、水使用量40%削減、2000万人以上の農家に普及"
+    },
+    "bottlenecks": [
+      {
+        "category": "knowledge_gap",
+        "description": "従来農法からの転換に必要な技術研修が不十分な地域が多い",
+        "severity": "medium"
+      },
+      {
+        "category": "scalability",
+        "description": "労働集約的な手法のため、大規模導入時の労働力確保が課題",
+        "severity": "medium"
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "farmer_ownership",
+        "description": "農家が自ら実験・検証しながら農法を改良するエンパワメントアプローチ"
+      },
+      {
+        "category": "institutional_integration",
+        "description": "各国の農業研究機関・大学との連携による科学的検証と普及"
+      }
+    ],
+    "tags": ["SRI", "water-saving", "rice", "sustainable", "low-input", "global"],
+    "source_url": "http://sri.ciifad.cornell.edu/",
+    "ai_confidence": 85,
+    "last_updated": "2024-12-01",
+    "coordinates": { "lat": -18.766947, "lng": 46.869107 }
+  },
+  {
+    "id": "farmer-field-schools",
+    "name": "Farmer Field Schools (FFS)",
+    "name_ja": "農民フィールドスクール（FFS）",
+    "country": ["Multiple"],
+    "country_ja": ["複数国（90カ国以上）"],
+    "region": "Multiple",
+    "flag": "🌍",
+    "implementer": "FAO",
+    "start_year": 1989,
+    "end_year": null,
+    "status": "active",
+    "approach": ["cooperative"],
+    "approach_ja": ["参加型農業研修"],
+    "target_crops": ["Various"],
+    "climate_relevance": "medium",
+    "description_en": "Participatory approach to agricultural extension where groups of farmers learn together through hands-on experimentation and observation in their own fields.",
+    "description_ja": "農家グループが自らの圃場で実験・観察を通じて学ぶ参加型農業普及アプローチ。90カ国以上、2000万人以上の農家に展開。",
+    "outcomes": {
+      "income_change_pct": 25,
+      "participants": 20000000,
+      "beneficiaries_total": 20000000,
+      "key_result": "90カ国以上で実施、2000万人以上の農家が参加、IPM技術の大規模普及に成功"
+    },
+    "bottlenecks": [
+      {
+        "category": "scalability",
+        "description": "質の高いファシリテーターの育成・確保が大規模展開のボトルネック",
+        "severity": "high"
+      },
+      {
+        "category": "institutional",
+        "description": "外部資金終了後の持続的運営が各国で課題",
+        "severity": "medium"
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "farmer_ownership",
+        "description": "実験を通じた発見学習により、農家の問題解決能力と自律性が向上"
+      },
+      {
+        "category": "behavioral_change",
+        "description": "グループ学習による社会的学習効果と農家間の知識普及"
+      }
+    ],
+    "tags": ["FFS", "participatory", "IPM", "extension", "discovery-learning", "FAO"],
+    "source_url": "https://www.fao.org/farmer-field-schools/",
+    "ai_confidence": 90,
+    "last_updated": "2025-01-05",
+    "coordinates": { "lat": -6.1751, "lng": 106.8650 }
+  },
+  {
+    "id": "haryana-horticulture",
+    "name": "Haryana Horticulture Conversion",
+    "name_ja": "ハリヤナ州園芸転換プロジェクト",
+    "country": ["India"],
+    "country_ja": ["インド"],
+    "region": "South Asia",
+    "flag": "🇮🇳",
+    "implementer": "JICA",
+    "start_year": 2012,
+    "end_year": 2020,
+    "status": "completed",
+    "approach": ["market-oriented", "climate-smart"],
+    "approach_ja": ["節水型園芸", "市場志向型"],
+    "target_crops": ["Vegetables", "Fruits", "Flowers"],
+    "climate_relevance": "high",
+    "description_en": "JICA project supporting transition from water-intensive rice-wheat monoculture to high-value horticulture in Haryana, India, addressing groundwater depletion and income diversification.",
+    "description_ja": "インド・ハリヤナ州における米麦単作から高付加価値園芸作物への転換支援プロジェクト。地下水枯渇対策と所得多角化を推進。マイクロ灌漑の導入により節水型農業を実現。",
+    "outcomes": {
+      "income_change_pct": 60,
+      "participants": 10000,
+      "beneficiaries_total": 35000,
+      "key_result": "参加農家の所得60%増加、水使用量40%削減、園芸作物への転換率50%達成"
+    },
+    "bottlenecks": [
+      {
+        "category": "knowledge_gap",
+        "description": "米麦栽培から園芸栽培への技術転換に農家が不安を感じ、初期採用が遅い",
+        "severity": "medium"
+      },
+      {
+        "category": "market_access",
+        "description": "農村部のコールドチェーン不足により、生鮮園芸品の流通に課題",
+        "severity": "high"
+      },
+      {
+        "category": "gender",
+        "description": "女性農家の意思決定参加が限定的で、技術研修へのアクセスが不平等",
+        "severity": "medium"
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "phased_scaleup",
+        "description": "実証圃場でのデモンストレーション→周辺農家への段階的展開"
+      },
+      {
+        "category": "ict_use",
+        "description": "マイクロ灌漑のIoTモニタリングシステムの導入による水管理の効率化"
+      },
+      {
+        "category": "market_linkage",
+        "description": "農家生産者組織（FPO）を通じた直接市場販売チャネルの構築"
+      }
+    ],
+    "tags": ["horticulture", "water-saving", "micro-irrigation", "India", "crop-diversification", "groundwater"],
+    "source_url": "https://www.jica.go.jp/",
+    "ai_confidence": 84,
+    "last_updated": "2024-10-20",
+    "coordinates": { "lat": 29.0588, "lng": 76.0856 }
+  }
+]
