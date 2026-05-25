@@ -17,6 +17,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
+# pyrefly: ignore [missing-import]
 import google.generativeai as genai
 
 from prompts import format_analysis_prompt, format_verification_prompt
