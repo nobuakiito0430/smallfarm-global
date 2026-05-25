@@ -418,17 +418,13 @@ a:hover {
 #world-map {
   height: 100%;
   width: 100%;
-  background: var(--bg-secondary);
+  background: #e8ecf0;
 }
 
-/* Leaflet overrides for dark theme */
+/* Leaflet overrides */
 .leaflet-container {
-  background: var(--bg-secondary) !important;
+  background: #e8ecf0 !important;
   font-family: 'Inter', sans-serif !important;
-}
-
-.leaflet-tile-pane {
-  filter: brightness(1.2) contrast(1.15) saturate(1.1);
 }
 
 .leaflet-popup-content-wrapper {
@@ -469,21 +465,22 @@ a:hover {
 
 /* Custom map marker */
 .custom-marker {
-  background: var(--accent-green);
-  border: 3px solid rgba(16, 185, 129, 0.4);
+  background: #059669;
+  border: 3px solid rgba(5, 150, 105, 0.5);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-inverse);
+  color: #ffffff;
   font-weight: 700;
   font-size: 0.75rem;
-  box-shadow: 0 0 16px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 0 12px rgba(5, 150, 105, 0.4);
   transition: all var(--transition-fast);
 }
 
 .custom-marker:hover {
   transform: scale(1.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 20px rgba(5, 150, 105, 0.5);
 }
 
 /* ---------- Timeline ---------- */

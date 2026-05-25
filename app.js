@@ -123,17 +123,11 @@
       scrollWheelZoom: true
     });
 
-    // Base dark tiles (no labels for clean look)
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+    // Light map tiles for clear visibility
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
       subdomains: 'abcd',
       maxZoom: 19
-    }).addTo(map);
-
-    // Bright label overlay for readability
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png', {
-      subdomains: 'abcd',
-      maxZoom: 19,
-      pane: 'overlayPane'
     }).addTo(map);
 
     // Group projects by coordinates (approximate)

@@ -19,7 +19,7 @@ from pathlib import Path
 
 import google.generativeai as genai
 
-from prompts import format_analysis_prompt
+from prompts import format_analysis_prompt, format_verification_prompt
 
 # ── Configuration ────────────────────────────────────────────────
 
@@ -31,6 +31,8 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 MODEL_NAME = "gemini-1.5-flash"
 MAX_ITEMS_PER_RUN = 30  # Stay within free tier limits
 RETRY_DELAY = 5  # seconds between retries
+CONFIDENCE_THRESHOLD = 40  # Reject analyses below this confidence
+ENABLE_VERIFICATION = True  # Enable 2-pass verification (uses 2x API calls)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -50,8 +52,17 @@ def setup_gemini():
 
 # ── Analysis Functions ───────────────────────────────────────────
 
+def _parse_json_response(text: str) -> dict | None:
+    """Extract and parse JSON from a Gemini response."""
+    text = text.strip()
+    json_match = re.search(r'```(?:json)?\s*\n?([\s\S]*?)\n?```', text)
+    if json_match:
+        text = json_match.group(1).strip()
+    return json.loads(text)
+
+
 def analyze_article(model, article: dict) -> dict | None:
-    """Analyze a single article with Gemini API."""
+    """Analyze a single article with Gemini API (with grounding checks)."""
     prompt = format_analysis_prompt(
         title=article.get("title", ""),
         source=article.get("source", ""),
@@ -63,17 +74,26 @@ def analyze_article(model, article: dict) -> dict | None:
     for attempt in range(3):
         try:
             response = model.generate_content(prompt)
-            text = response.text.strip()
+            result = _parse_json_response(response.text)
 
-            # Extract JSON from response (handle markdown code blocks)
-            json_match = re.search(r'```(?:json)?\s*\n?([\s\S]*?)\n?```', text)
-            if json_match:
-                text = json_match.group(1).strip()
+            # Compute confidence from multiple signals
+            extraction_conf = result.get("extraction_confidence", 50)
+            relevance_score = result.get("relevance_score", 50)
+            grounding = result.get("grounding_check", {})
+            all_sourced = grounding.get("all_claims_sourced", False)
 
-            # Try to parse JSON
-            result = json.loads(text)
-            result["ai_confidence"] = result.get("relevance_score", 50)
+            # Weighted confidence: grounding matters most
+            confidence = int(
+                extraction_conf * 0.5 +
+                relevance_score * 0.3 +
+                (100 if all_sourced else 30) * 0.2
+            )
+            result["ai_confidence"] = confidence
             result["analyzed_at"] = datetime.now().isoformat()
+
+            # Strip claims that lack evidence quotes
+            result = strip_ungrounded_claims(result)
+
             return result
 
         except json.JSONDecodeError as e:
@@ -86,6 +106,78 @@ def analyze_article(model, article: dict) -> dict | None:
                 time.sleep(RETRY_DELAY * (attempt + 1))
 
     return None
+
+
+def strip_ungrounded_claims(result: dict) -> dict:
+    """Remove bottlenecks/success_factors that lack evidence quotes."""
+    original_b = len(result.get("bottlenecks", []))
+    original_s = len(result.get("success_factors", []))
+
+    result["bottlenecks"] = [
+        b for b in result.get("bottlenecks", [])
+        if b.get("evidence_quote") and len(b["evidence_quote"].strip()) > 10
+    ]
+    result["success_factors"] = [
+        s for s in result.get("success_factors", [])
+        if s.get("evidence_quote") and len(s["evidence_quote"].strip()) > 10
+    ]
+
+    removed_b = original_b - len(result["bottlenecks"])
+    removed_s = original_s - len(result["success_factors"])
+    if removed_b or removed_s:
+        logger.info(f"  Grounding filter: removed {removed_b} bottleneck(s), {removed_s} success factor(s) without evidence")
+
+    return result
+
+
+def verify_analysis(model, article: dict, analysis: dict) -> dict:
+    """Second-pass: verify that analysis claims are grounded in source text."""
+    prompt = format_verification_prompt(
+        content=article.get("content", ""),
+        analysis=json.dumps(analysis, ensure_ascii=False, indent=2)
+    )
+
+    try:
+        response = model.generate_content(prompt)
+        verification = _parse_json_response(response.text)
+
+        # Apply recommended removals
+        removals = verification.get("recommended_removals", [])
+        for path in removals:
+            if path.startswith("bottlenecks["):
+                idx = int(re.search(r'\[(\d+)\]', path).group(1))
+                if 0 <= idx < len(analysis.get("bottlenecks", [])):
+                    analysis["bottlenecks"][idx] = None
+            elif path.startswith("success_factors["):
+                idx = int(re.search(r'\[(\d+)\]', path).group(1))
+                if 0 <= idx < len(analysis.get("success_factors", [])):
+                    analysis["success_factors"][idx] = None
+
+        analysis["bottlenecks"] = [b for b in analysis.get("bottlenecks", []) if b is not None]
+        analysis["success_factors"] = [s for s in analysis.get("success_factors", []) if s is not None]
+
+        # Update confidence with verifier's assessment
+        corrected = verification.get("corrected_confidence")
+        if corrected is not None:
+            analysis["ai_confidence"] = min(analysis["ai_confidence"], corrected)
+
+        analysis["verification"] = {
+            "passed": verification.get("verification_passed", False),
+            "accuracy": verification.get("overall_accuracy", 0),
+            "issues_count": len(verification.get("issues", [])),
+            "removals": len(removals)
+        }
+
+        logger.info(f"  Verification: passed={verification.get('verification_passed')}, "
+                    f"accuracy={verification.get('overall_accuracy')}, "
+                    f"removed={len(removals)} claims")
+
+        return analysis
+
+    except Exception as e:
+        logger.warning(f"  Verification failed: {e}")
+        analysis["verification"] = {"passed": False, "error": str(e)}
+        return analysis
 
 
 def find_latest_raw_file() -> Path | None:
@@ -247,6 +339,7 @@ def main():
     # Analyze each item
     analyzed = 0
     relevant = 0
+    rejected_low_confidence = 0
 
     for i, item in enumerate(raw_items[:MAX_ITEMS_PER_RUN]):
         logger.info(f"[{i+1}/{min(len(raw_items), MAX_ITEMS_PER_RUN)}] Analyzing: {item.get('title', '')[:60]}...")
@@ -262,8 +355,26 @@ def main():
             logger.info(f"  Not relevant (score: {result.get('relevance_score', 0)})")
             continue
 
+        # Confidence threshold gate
+        confidence = result.get("ai_confidence", 0)
+        if confidence < CONFIDENCE_THRESHOLD:
+            logger.info(f"  Rejected: confidence {confidence} < threshold {CONFIDENCE_THRESHOLD}")
+            rejected_low_confidence += 1
+            continue
+
+        # Optional 2-pass verification
+        if ENABLE_VERIFICATION:
+            result = verify_analysis(model, item, result)
+            # Re-check confidence after verification
+            if result.get("ai_confidence", 0) < CONFIDENCE_THRESHOLD:
+                logger.info(f"  Rejected after verification: confidence {result.get('ai_confidence')}")
+                rejected_low_confidence += 1
+                continue
+
         relevant += 1
-        logger.info(f"  Relevant! (score: {result.get('relevance_score', 0)}, confidence: {result.get('ai_confidence', 0)})")
+        logger.info(f"  ✅ Accepted (confidence: {result.get('ai_confidence', 0)}, "
+                    f"bottlenecks: {len(result.get('bottlenecks', []))}, "
+                    f"success_factors: {len(result.get('success_factors', []))})")
 
         # Merge into appropriate data files
         if item.get("type") == "paper":
@@ -274,8 +385,8 @@ def main():
         # Check if a new project was discovered
         existing_projects = merge_project(existing_projects, result, item)
 
-        # Rate limiting
-        time.sleep(2)
+        # Rate limiting (longer delay with verification enabled)
+        time.sleep(4 if ENABLE_VERIFICATION else 2)
 
     # Save updated data
     save_data(existing_projects, "projects.json")
@@ -283,7 +394,8 @@ def main():
     save_data(existing_news, "news.json")
 
     logger.info("=" * 60)
-    logger.info(f"Analysis complete: {analyzed} analyzed, {relevant} relevant")
+    logger.info(f"Analysis complete: {analyzed} analyzed, {relevant} accepted, {rejected_low_confidence} rejected (low confidence)")
+    logger.info(f"Verification: {'enabled' if ENABLE_VERIFICATION else 'disabled'}, Confidence threshold: {CONFIDENCE_THRESHOLD}")
     logger.info("=" * 60)
 
 
