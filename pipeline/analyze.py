@@ -28,7 +28,7 @@ DATA_DIR = BASE_DIR / "data"
 RAW_DIR = DATA_DIR / "raw"
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-MODEL_NAME = "gemini-2.0-flash"
+MODEL_NAME = "gemini-2.5-flash"
 MAX_ITEMS_PER_RUN = 30  # Stay within free tier limits
 RETRY_DELAY = 5  # seconds between retries
 CONFIDENCE_THRESHOLD = 40  # Reject analyses below this confidence
