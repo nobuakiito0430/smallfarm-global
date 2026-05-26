@@ -17,6 +17,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 import requests
+# pyrefly: ignore [missing-import]
 import feedparser
 
 # ── Configuration ────────────────────────────────────────────────
