@@ -198,33 +198,48 @@ def collect_rss() -> list:
             logger.info(f"  Fetching {feed_config['name']}...")
             feed = feedparser.parse(feed_config["url"])
 
+            feed_matched = 0
+            feed_skipped_dup = 0
+            feed_skipped_kw = 0
+            feed_total = len(feed.entries[:20])
+
+            if feed.bozo and feed_total == 0:
+                logger.warning(f"  {feed_config['name']}: Parse error - {feed.bozo_exception}")
+                continue
+
             for entry in feed.entries[:20]:  # Limit entries per feed
                 url = entry.get("link", "")
                 if not url or url in existing_urls:
+                    feed_skipped_dup += 1
                     continue
 
                 # Check keywords
                 text = f"{entry.get('title', '')} {entry.get('summary', '')}".lower()
                 if not any(kw.lower() in text for kw in feed_config["filter_keywords"]):
+                    feed_skipped_kw += 1
                     continue
 
                 # Parse date
                 date = ""
                 if hasattr(entry, "published_parsed") and entry.published_parsed:
                     date = datetime(*entry.published_parsed[:6]).strftime("%Y-%m-%d")
+                elif hasattr(entry, "updated_parsed") and entry.updated_parsed:
+                    date = datetime(*entry.updated_parsed[:6]).strftime("%Y-%m-%d")
 
                 items.append({
                     "type": "news",
                     "title": entry.get("title", "Untitled"),
                     "source": feed_config["name"],
                     "date": date,
-                    "content": entry.get("summary", ""),
+                    "content": entry.get("summary", "") or entry.get("description", ""),
                     "source_url": url,
                     "collected_at": datetime.now().isoformat()
                 })
                 existing_urls.add(url)
+                feed_matched += 1
 
-            logger.info(f"  {feed_config['name']}: collected entries")
+            logger.info(f"  {feed_config['name']}: {feed_total} entries, "
+                        f"{feed_matched} matched, {feed_skipped_dup} dup, {feed_skipped_kw} no-keyword")
 
         except Exception as e:
             logger.warning(f"  {feed_config['name']} failed: {e}")

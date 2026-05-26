@@ -29,11 +29,11 @@ DATA_DIR = BASE_DIR / "data"
 RAW_DIR = DATA_DIR / "raw"
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-MODEL_NAME = "gemini-2.5-flash"
+MODEL_NAME = "gemini-2.0-flash"  # 1500 req/day free tier (2.5-flash is only 20/day!)
 MAX_ITEMS_PER_RUN = 30  # Stay within free tier limits
-RETRY_DELAY = 5  # seconds between retries
+RETRY_DELAY = 10  # seconds between retries (increased for rate limits)
 CONFIDENCE_THRESHOLD = 40  # Reject analyses below this confidence
-ENABLE_VERIFICATION = True  # Enable 2-pass verification (uses 2x API calls)
+ENABLE_VERIFICATION = False  # Disable by default to save API quota (set True if using paid tier)
 
 logging.basicConfig(
     level=logging.INFO,
