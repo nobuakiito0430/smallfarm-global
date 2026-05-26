@@ -43,7 +43,7 @@ SEARCH_QUERIES = [
     "agricultural extension market linkage",
 ]
 
-# RSS Feed sources (verified working 2026-05)
+# RSS Feed sources (verified working 2026-05-26)
 RSS_FEEDS = [
     {
         "name": "ReliefWeb Agriculture",
@@ -51,19 +51,19 @@ RSS_FEEDS = [
         "filter_keywords": ["smallholder", "farmer", "agriculture", "rural", "food security", "market", "crop"]
     },
     {
-        "name": "Devex Development",
-        "url": "https://www.devex.com/news/search.rss?query=smallholder+agriculture",
-        "filter_keywords": ["smallholder", "farmer", "agriculture", "JICA", "SHEP", "horticulture", "market access", "food"]
+        "name": "Google News Smallholder",
+        "url": "https://news.google.com/rss/search?q=smallholder+agriculture+developing+countries&hl=en",
+        "filter_keywords": ["smallholder", "farmer", "agriculture", "rural", "food", "market", "crop", "JICA", "SHEP"]
     },
     {
-        "name": "CGIAR Research",
-        "url": "https://cgspace.cgiar.org/search?query=smallholder+commercialization&rpp=10&format=rss",
-        "filter_keywords": ["smallholder", "farmer", "commercialization", "market", "value chain", "agriculture"]
+        "name": "AllAfrica",
+        "url": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
+        "filter_keywords": ["smallholder", "farmer", "agriculture", "rural", "food security", "market", "crop", "horticulture"]
     },
     {
-        "name": "JICA News",
-        "url": "https://www.jica.go.jp/english/news/field/rss.xml",
-        "filter_keywords": ["agriculture", "farmer", "rural", "SHEP", "horticulture", "food"]
+        "name": "ScienceDaily Agriculture",
+        "url": "https://www.sciencedaily.com/rss/plants_animals/agriculture_and_food.xml",
+        "filter_keywords": ["smallholder", "farmer", "crop", "agriculture", "food security", "developing", "rural"]
     },
 ]
 
