@@ -43,27 +43,27 @@ SEARCH_QUERIES = [
     "agricultural extension market linkage",
 ]
 
-# RSS Feed sources
+# RSS Feed sources (verified working 2026-05)
 RSS_FEEDS = [
     {
-        "name": "JICA Topics",
-        "url": "https://www.jica.go.jp/Resource/english/news/field/rss.xml",
-        "filter_keywords": ["agriculture", "farmer", "rural", "SHEP", "horticulture"]
+        "name": "ReliefWeb Agriculture",
+        "url": "https://reliefweb.int/updates/rss.xml?search=smallholder+agriculture",
+        "filter_keywords": ["smallholder", "farmer", "agriculture", "rural", "food security", "market", "crop"]
     },
     {
-        "name": "FAO News",
-        "url": "https://www.fao.org/rss/home/en/",
-        "filter_keywords": ["smallholder", "farmer", "market", "horticulture"]
+        "name": "Devex Development",
+        "url": "https://www.devex.com/news/search.rss?query=smallholder+agriculture",
+        "filter_keywords": ["smallholder", "farmer", "agriculture", "JICA", "SHEP", "horticulture", "market access", "food"]
     },
     {
-        "name": "World Bank Agriculture",
-        "url": "https://blogs.worldbank.org/en/agfood/rss.xml",
-        "filter_keywords": ["smallholder", "farmer", "agriculture"]
+        "name": "CGIAR Research",
+        "url": "https://cgspace.cgiar.org/search?query=smallholder+commercialization&rpp=10&format=rss",
+        "filter_keywords": ["smallholder", "farmer", "commercialization", "market", "value chain", "agriculture"]
     },
     {
-        "name": "IFAD News",
-        "url": "https://www.ifad.org/en/rss",
-        "filter_keywords": ["smallholder", "rural", "farmer", "market"]
+        "name": "JICA News",
+        "url": "https://www.jica.go.jp/english/news/field/rss.xml",
+        "filter_keywords": ["agriculture", "farmer", "rural", "SHEP", "horticulture", "food"]
     },
 ]
 
