@@ -1200,5 +1200,84 @@
       "lat": 29.0588,
       "lng": 76.0856
     }
+  },
+  {
+    "id": "emergency-support-for-food-sec",
+    "name": "Emergency Support for Food Security Project",
+    "name_ja": "Emergency Support for Food Security Project",
+    "country": [
+      "Bangladesh"
+    ],
+    "country_ja": [
+      "Bangladesh"
+    ],
+    "region": "South Asia",
+    "flag": "🌍",
+    "implementer": "World Bank",
+    "start_year": null,
+    "end_year": null,
+    "status": "active",
+    "approach": [
+      "input-market"
+    ],
+    "approach_ja": [
+      "input-market"
+    ],
+    "target_crops": [
+      "Rice"
+    ],
+    "climate_relevance": "none",
+    "description_en": "The World Bank has approved $1.1 billion in emergency support for Bangladesh to safeguard food security and livelihoods. This support aims to mitigate the impact of price and supply volatility in fertilizer and fuel markets, with a particular focus on smallholder farmers. The projects will ensure fertilizer imports critical for rice production and provide cash transfers and livelihood assistance to affected households.",
+    "description_ja": "世界銀行は、バングラデシュの食料安全保障と生活を保護するため、11億ドルの緊急支援を承認しました。この支援は、肥料や燃料市場の価格変動と供給不足の影響を緩和し、特に小規模農家への影響を軽減することを目的としています。プロジェクトは、米生産に必要な肥料の輸入を確保し、影響を受けた世帯への現金給付や生計支援を提供します。",
+    "outcomes": {
+      "income_change_pct": null,
+      "participants": null,
+      "key_result": "The Emergency Support for Food Security Project will finance imports of 600,000 metric tons of critical fertilizers, half of which would be Urea, covering 1,400,000 hectares of rice production cultivated by smallholder farmers."
+    },
+    "bottlenecks": [
+      {
+        "category": "input_market",
+        "description": "肥料価格と供給の変動が、バングラデシュの経済、特に小規模農家や貧困層に深刻な影響を与えています。バングラデシュは肥料の85%以上を輸入に依存しています。",
+        "severity": "high",
+        "evidence_quote": "“Rising food, fertilizer, and fuel prices stemming from the Middle East Conflict, along with tighter fiscal space have deeply impacted Bangladesh’s economy, hitting smallholder farmers as well as poor and vulnerable people the hardest,”",
+        "is_explicit": true
+      },
+      {
+        "category": "input_market",
+        "description": "肥料供給の混乱は、国の食料安全保障を脅かすだけでなく、貧困を深化させ、雇用を失う可能性があります。",
+        "severity": "high",
+        "evidence_quote": "“Bangladesh’s food security depends on Aman and Boro rice seasons, which together account for about 90% of the country’s total rice production. Further, about half the population is employed in agriculture sector. So, any disruption in fertilizer supply would not only threaten food security, it would deepen poverty and cost jobs,”",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "public_private",
+        "description": "世界銀行は、バングラデシュの食料安全保障と生活を守るために、肥料供給を確保し、影響を受けた人々や事業への支援を提供することで、緊急支援を拡大しました。",
+        "severity": null,
+        "evidence_quote": "“The World Bank has stepped up with immediate support to help Bangladesh mitigate this impact to ensure fertilizer supply for rice production, protect households, jobs and livelihoods and continue with essential services.”",
+        "is_explicit": true
+      },
+      {
+        "category": "phased_scaleup",
+        "description": "2つのプロジェクトを通じて、肥料輸入、現金給付、生計支援、および必須サービスの継続を支援し、ショックの影響から人々、事業、雇用を保護するための迅速な対応を目指しています。",
+        "severity": null,
+        "evidence_quote": "The Emergency Support for Food Security Project ($300 million) will provide time-bound financing to help Bangladesh import fertilizers critical for the Aman and Boro seasons... The Contingent Emergency Response Project ($713 million) will support quick-disbursing emergency expenditures, including cash transfers and livelihood assistance for affected households and micro, small, and medium enterprises, helping stabilize incomes and preserve jobs during crises. It will also finance fuel and energy supplies to continue essential services...",
+        "is_explicit": true
+      }
+    ],
+    "tags": [
+      "food security",
+      "livelihoods",
+      "smallholder farmers",
+      "fertilizer",
+      "rice production",
+      "emergency support",
+      "Bangladesh"
+    ],
+    "source_url": "https://reliefweb.int/report/bangladesh/bangladesh-world-bank-provides-11-billion-emergency-support-safeguard-food-security-livelihoods",
+    "ai_confidence": 93,
+    "last_updated": "2026-06-30",
+    "coordinates": null
   }
 ]

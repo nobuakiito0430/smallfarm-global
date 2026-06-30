@@ -1,1 +1,149 @@
-[]
+[
+  {
+    "title": "Bangladesh: World Bank Provides $1.1 Billion Emergency Support to Safeguard Food Security, Livelihoods",
+    "source": "ReliefWeb Agriculture",
+    "date": "2026-06-29",
+    "source_url": "https://reliefweb.int/report/bangladesh/bangladesh-world-bank-provides-11-billion-emergency-support-safeguard-food-security-livelihoods",
+    "summary_ja": "世界銀行は、バングラデシュの食料安全保障と生活を保護するため、11億ドルの緊急支援を承認しました。この支援は、肥料や燃料市場の価格変動と供給不足の影響を緩和し、特に小規模農家への影響を軽減することを目的としています。プロジェクトは、米生産に必要な肥料の輸入を確保し、影響を受けた世帯への現金給付や生計支援を提供します。",
+    "summary_en": "The World Bank has approved $1.1 billion in emergency support for Bangladesh to safeguard food security and livelihoods. This support aims to mitigate the impact of price and supply volatility in fertilizer and fuel markets, with a particular focus on smallholder farmers. The projects will ensure fertilizer imports critical for rice production and provide cash transfers and livelihood assistance to affected households.",
+    "tags": [
+      "food security",
+      "livelihoods",
+      "smallholder farmers",
+      "fertilizer",
+      "rice production",
+      "emergency support",
+      "Bangladesh"
+    ],
+    "bottlenecks": [
+      {
+        "category": "input_market",
+        "description": "肥料価格と供給の変動が、バングラデシュの経済、特に小規模農家や貧困層に深刻な影響を与えています。バングラデシュは肥料の85%以上を輸入に依存しています。",
+        "severity": "high",
+        "evidence_quote": "“Rising food, fertilizer, and fuel prices stemming from the Middle East Conflict, along with tighter fiscal space have deeply impacted Bangladesh’s economy, hitting smallholder farmers as well as poor and vulnerable people the hardest,”",
+        "is_explicit": true
+      },
+      {
+        "category": "input_market",
+        "description": "肥料供給の混乱は、国の食料安全保障を脅かすだけでなく、貧困を深化させ、雇用を失う可能性があります。",
+        "severity": "high",
+        "evidence_quote": "“Bangladesh’s food security depends on Aman and Boro rice seasons, which together account for about 90% of the country’s total rice production. Further, about half the population is employed in agriculture sector. So, any disruption in fertilizer supply would not only threaten food security, it would deepen poverty and cost jobs,”",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "public_private",
+        "description": "世界銀行は、バングラデシュの食料安全保障と生活を守るために、肥料供給を確保し、影響を受けた人々や事業への支援を提供することで、緊急支援を拡大しました。",
+        "severity": null,
+        "evidence_quote": "“The World Bank has stepped up with immediate support to help Bangladesh mitigate this impact to ensure fertilizer supply for rice production, protect households, jobs and livelihoods and continue with essential services.”",
+        "is_explicit": true
+      },
+      {
+        "category": "phased_scaleup",
+        "description": "2つのプロジェクトを通じて、肥料輸入、現金給付、生計支援、および必須サービスの継続を支援し、ショックの影響から人々、事業、雇用を保護するための迅速な対応を目指しています。",
+        "severity": null,
+        "evidence_quote": "The Emergency Support for Food Security Project ($300 million) will provide time-bound financing to help Bangladesh import fertilizers critical for the Aman and Boro seasons... The Contingent Emergency Response Project ($713 million) will support quick-disbursing emergency expenditures, including cash transfers and livelihood assistance for affected households and micro, small, and medium enterprises, helping stabilize incomes and preserve jobs during crises. It will also finance fuel and energy supplies to continue essential services...",
+        "is_explicit": true
+      }
+    ],
+    "ai_confidence": 93,
+    "analyzed_at": "2026-06-30T16:36:58.418209"
+  },
+  {
+    "title": "WFP Madagascar Country Brief June 2026",
+    "source": "ReliefWeb Agriculture",
+    "date": "2026-06-23",
+    "source_url": "https://reliefweb.int/report/madagascar/wfp-madagascar-country-brief-june-2026",
+    "summary_ja": "マダガスカルは構造的な脆弱性と干ばつ、サイクロンといった気候変動の影響に苦しむ低所得国です。農業依存度の高さにもかかわらず、市場へのアクセス制限と低生産性が貧困と気候・経済的ショックへの脆弱性を増幅させています。WFPは、人道的支援、気候適応、開発投資を統合し、小規模農家へのレジリエンス支援を含むアプローチを推進しています。",
+    "summary_en": "Madagascar is a low-income country grappling with structural vulnerabilities and recurrent climate shocks like droughts and cyclones. Despite high dependence on agriculture, limited market access and low productivity perpetuate poverty and heighten exposure to climatic and economic shocks. WFP promotes an integrated approach linking humanitarian action, climate adaptation, and development investments, including resilience support for smallholder households.",
+    "tags": [
+      "food security",
+      "nutrition",
+      "climate change adaptation",
+      "resilience",
+      "humanitarian aid",
+      "smallholder farmers"
+    ],
+    "bottlenecks": [
+      {
+        "category": "market_access",
+        "description": "農業従事者の市場へのアクセスが限られていることが、貧困から抜け出せない一因となっています。",
+        "severity": "high",
+        "evidence_quote": "With more than three quarters of households dependent on agriculture, limited market access and low productivity continue to trap families in poverty and heighten their exposure to climatic and economic shocks.",
+        "is_explicit": true
+      },
+      {
+        "category": "institutional",
+        "description": "マダガスカルは構造的な脆弱性に直面しており、それが気候変動の影響を悪化させています。",
+        "severity": "high",
+        "evidence_quote": "Madagascar remains a low-income country grappling with structural vulnerabilities and recurrent climate shocks, including droughts and cyclones.",
+        "is_explicit": true
+      },
+      {
+        "category": "climate_risk",
+        "description": "干ばつやサイクロンといった気候変動によるショックが頻繁に発生し、食料不安を悪化させています。",
+        "severity": "high",
+        "evidence_quote": "Madagascar remains a low-income country grappling with structural vulnerabilities and recurrent climate shocks, including droughts and cyclones.",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "institutional_integration",
+        "description": "人道的支援、気候適応、開発投資を統合したアプローチが推進されています。",
+        "severity": null,
+        "evidence_quote": "WFP continues to promote an integrated approach that links humanitarian action, climate adaptation, and development investments.",
+        "is_explicit": true
+      },
+      {
+        "category": "market_linkage",
+        "description": "小規模農家へのレジリエンス支援が実施されています。",
+        "severity": null,
+        "evidence_quote": "This includes school meals for vulnerable children and resilience support for smallholder households, underpinned by strengthened emergency preparedness and aligned with the WFP Madagascar Country Strategic Plan.",
+        "is_explicit": true
+      }
+    ],
+    "ai_confidence": 87,
+    "analyzed_at": "2026-06-30T16:37:30.056162"
+  },
+  {
+    "title": "Lions Clubs International Foundation and World Food Programme scale up locally sourced school meals for children in Nepal",
+    "source": "ReliefWeb Agriculture",
+    "date": "2026-06-22",
+    "source_url": "https://reliefweb.int/report/nepal/lions-clubs-international-foundation-and-world-food-programme-scale-locally-sourced-school-meals-children-nepal",
+    "summary_ja": "ネパールで、Lions Clubs International Foundation (LCIF)とWorld Food Programme (WFP)は、地元政府と連携し、地元農家から調達した食材を使用した学校給食プログラムを拡大しています。この取り組みは、学童の栄養改善、出席率向上、そして小規模農家にとっての安定した市場創出を目指しています。",
+    "summary_en": "In Nepal, the Lions Clubs International Foundation (LCIF) and World Food Programme (WFP), in collaboration with local governments, are scaling up school meal programs that utilize locally sourced ingredients from smallholder farmers. This initiative aims to improve child nutrition and school attendance, while creating stable markets for local farmers.",
+    "tags": [
+      "school feeding",
+      "local sourcing",
+      "smallholder farmers",
+      "market access",
+      "nutrition",
+      "Nepal"
+    ],
+    "bottlenecks": [],
+    "success_factors": [
+      {
+        "category": "market_linkage",
+        "description": "地域農家から調達された食材を使った学校給食は、地元の農家のために安定した市場を創出します。",
+        "evidence_quote": "“Mid-day meals play a vital role in improving attendance and learning outcomes and the Home-grown school feeding approach helps ensure these meals are nutritious and locally sourced, creating stable markets for local farmers,”",
+        "is_explicit": true
+      },
+      {
+        "category": "institutional_integration",
+        "description": "このパートナーシップは、ネパール政府の昼食プログラムを直接支援し、社会保障と地域農業を結びつけることの重要性を強調しています。",
+        "evidence_quote": "As Nepal continues its transition towards a nationally led school meals system, partnership between the Government of Nepal, WFP and LCIF highlights the importance of linking social protection with local agriculture to build stronger, more resilient food systems.",
+        "is_explicit": true
+      },
+      {
+        "category": "phased_scaleup",
+        "description": "1年間のパイロットフェーズを経て、このパートナーシップは次の1年間に拡大されました。",
+        "evidence_quote": "The collaboration follows a one-year pilot phase completed in 2025, during which LCIF and World Food Program USA jointly invested USD 1 million to support school meals programmes in Nepal. Following this success, the partnership has been expanded for the next one year (2026-2027) with a budget of USD 500k jointly invested by LCIF and WFP USA.",
+        "is_explicit": true
+      }
+    ],
+    "ai_confidence": 93,
+    "analyzed_at": "2026-06-30T16:38:07.374328"
+  }
+]
