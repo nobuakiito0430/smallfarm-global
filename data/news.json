@@ -336,5 +336,46 @@
     "success_factors": [],
     "ai_confidence": 91,
     "analyzed_at": "2026-06-30T16:50:04.567049"
+  },
+  {
+    "title": "AI offers promise for agriculture, but smallholder farmers risk being left behind - The Conversation",
+    "source": "Google News Smallholder",
+    "date": "2026-06-03",
+    "source_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTWtDWWZwQy1DTjFpaXZmeXI1dXFJbUhESllyYk9qTURENk1jMDJNRTJic1oteGpGdDREcmc4d01GeHp0a2ZKM0YxSmI0V3hFQUVNd3d2VzdUb3VwWVYyVnlDOGNLd0pZbVp3ZzJnX3VGUW1Xak5sNjJEbThxRU1FREF2VXRkSXpVM2Ezb0NSTkRrRnNwQko0YVFGUUJsenVZVG1LQlRJTkkxQ09ra0dYZ2dnb05OZw?oc=5",
+    "summary_ja": "AI技術は農業に革新をもたらす可能性があるが、小規模農家はデジタル格差やリソース不足により取り残されるリスクがある。特にコストやインフラの制約が、彼らの技術導入や商業的成功を阻む障壁となっている。",
+    "summary_en": "AI offers potential for agricultural transformation, yet smallholder farmers face the risk of being left behind due to digital divides and resource constraints. The lack of infrastructure and high costs remain significant barriers to their adoption of these technologies.",
+    "tags": [
+      "AI",
+      "smallholder farmers",
+      "digital divide",
+      "agricultural technology",
+      "equity"
+    ],
+    "bottlenecks": [
+      {
+        "category": "knowledge_gap",
+        "description": "デジタルリテラシーの不足や、AI技術を農場へ応用する方法に関する知識の欠如。",
+        "severity": "high",
+        "evidence_quote": "Many smallholder farmers lack the digital literacy and technical knowledge required to leverage these tools effectively.",
+        "is_explicit": true
+      },
+      {
+        "category": "financial_access",
+        "description": "高額なサブスクリプション費用やデバイス購入費が経済的な障壁となっている。",
+        "severity": "high",
+        "evidence_quote": "High costs of subscription services and hardware can be prohibitive for farmers with limited capital.",
+        "is_explicit": true
+      },
+      {
+        "category": "institutional",
+        "description": "農村部における安定したインターネット接続や電力といった物理的インフラの不足。",
+        "severity": "high",
+        "evidence_quote": "Poor connectivity and lack of electricity in rural areas hinder the adoption of digital technologies.",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [],
+    "ai_confidence": 93,
+    "analyzed_at": "2026-06-30T22:18:20.017257"
   }
 ]
