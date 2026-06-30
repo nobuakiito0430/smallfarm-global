@@ -29,7 +29,7 @@ DATA_DIR = BASE_DIR / "data"
 RAW_DIR = DATA_DIR / "raw"
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-MODEL_NAME = os.environ.get("GEMINI_MODEL") or "gemini-2.0-flash"
+MODEL_NAME = os.environ.get("GEMINI_MODEL") or "gemini-3.1-flash-lite"
 MAX_ITEMS_PER_RUN = int(os.environ.get("MAX_ITEMS_PER_RUN", "10"))
 RETRY_DELAY = 10  # seconds between retries (increased for rate limits)
 CONFIDENCE_THRESHOLD = 40  # Reject analyses below this confidence
@@ -319,6 +319,7 @@ def main():
         return
 
     logger.info(f"Processing: {raw_file.name}")
+    logger.info(f"Gemini model: {MODEL_NAME}")
     raw_items = json.loads(raw_file.read_text(encoding="utf-8"))
 
     if not raw_items:

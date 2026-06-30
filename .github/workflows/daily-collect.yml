@@ -37,7 +37,7 @@ jobs:
         run: python pipeline/analyze.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          GEMINI_MODEL: gemini-3.1-flash-lite
           MAX_ITEMS_PER_RUN: 10
 
       - name: Update statistics
