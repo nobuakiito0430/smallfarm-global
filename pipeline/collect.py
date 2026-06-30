@@ -1,18 +1,18 @@
 """
 SmallFarm Global — Data Collection Script
-Collects articles and papers from OpenAlex API and RSS feeds.
+Collects papers from Semantic Scholar and news articles from RSS feeds.
 
 Usage:
     python pipeline/collect.py
 
 Environment variables:
-    OPENALEX_EMAIL: Email for OpenAlex polite pool (optional but recommended)
+    SEMANTIC_SCHOLAR_API_KEY: Semantic Scholar API key (optional)
 """
 
 import os
 import json
-import hashlib
 import logging
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -26,10 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 RAW_DIR = DATA_DIR / "raw"
 
-OPENALEX_EMAIL = os.environ.get("OPENALEX_EMAIL", "")
-OPENALEX_BASE = "https://api.openalex.org"
+SEMANTIC_SCHOLAR_API_KEY = os.environ.get("SEMANTIC_SCHOLAR_API_KEY", "")
+SEMANTIC_SCHOLAR_BASE = "https://api.semanticscholar.org/graph/v1"
+MAX_PAPERS_PER_QUERY = int(os.environ.get("MAX_PAPERS_PER_QUERY", "5"))
+MAX_PAPERS_PER_RUN = int(os.environ.get("MAX_PAPERS_PER_RUN", "12"))
 
-# Search queries for OpenAlex
+# Search queries for Semantic Scholar
 SEARCH_QUERIES = [
     "smallholder commercialization",
     "market-oriented agriculture developing countries",
@@ -74,13 +76,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger("collect")
 
-# ── Utility Functions ────────────────────────────────────────────
-
-def url_hash(url: str) -> str:
-    """Generate a short hash from a URL for deduplication."""
-    return hashlib.md5(url.encode()).hexdigest()[:12]
-
-
 def load_existing_urls() -> set:
     """Load all URLs from existing data files to avoid duplicates."""
     urls = set()
@@ -108,80 +103,165 @@ def save_collected(items: list, date_str: str):
     logger.info(f"Saved {len(items)} items to {output_path}")
 
 
-# ── OpenAlex Collection ──────────────────────────────────────────
+def load_existing_data(filename: str) -> list:
+    """Load existing structured data from data/*.json."""
+    filepath = DATA_DIR / filename
+    if filepath.exists():
+        try:
+            return json.loads(filepath.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            return []
+    return []
 
-def collect_openalex() -> list:
-    """Collect recent papers from OpenAlex API."""
-    logger.info("Starting OpenAlex collection...")
+
+def save_data(data: list, filename: str):
+    """Save structured data to data/*.json."""
+    filepath = DATA_DIR / filename
+    filepath.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+    logger.info(f"Saved {len(data)} items to {filepath}")
+
+
+def trim_to_recent(items: list, days: int = 30) -> list:
+    """Keep recent dated items plus undated items."""
+    cutoff = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
+    return [item for item in items if (item.get("date", "") >= cutoff or not item.get("date"))]
+
+
+# ── Semantic Scholar Collection ──────────────────────────────────
+
+def _paper_url(paper: dict) -> str:
+    """Prefer DOI URLs, then Semantic Scholar URLs."""
+    external_ids = paper.get("externalIds") or {}
+    doi = external_ids.get("DOI")
+    if doi:
+        return f"https://doi.org/{doi}"
+    return paper.get("url") or f"https://www.semanticscholar.org/paper/{paper.get('paperId', '')}"
+
+
+def _paper_summary(paper: dict) -> str:
+    """Use Semantic Scholar TLDR when available, otherwise shorten the abstract."""
+    tldr = paper.get("tldr") or {}
+    if tldr.get("text"):
+        return tldr["text"]
+    abstract = paper.get("abstract") or ""
+    return abstract[:700] + ("..." if len(abstract) > 700 else "")
+
+
+def _merge_semantic_papers(new_papers: list):
+    """Merge Semantic Scholar papers directly into papers.json without Gemini calls."""
+    existing = load_existing_data("papers.json")
+    seen = {item.get("source_url") for item in existing if item.get("source_url")}
+
+    added = 0
+    for paper in new_papers:
+        if paper.get("source_url") in seen:
+            continue
+        existing.append(paper)
+        seen.add(paper.get("source_url"))
+        added += 1
+
+    existing = sorted(trim_to_recent(existing), key=lambda item: item.get("date", ""), reverse=True)
+    save_data(existing, "papers.json")
+    logger.info(f"Semantic Scholar merge: {added} new paper(s)")
+
+
+def collect_semantic_scholar() -> list:
+    """Collect recent papers from Semantic Scholar Academic Graph API."""
+    logger.info("Starting Semantic Scholar collection...")
     items = []
     existing_urls = load_existing_urls()
+    seen_urls = set(existing_urls)
 
-    since_date = (datetime.now() - timedelta(days=30)).strftime("%Y-%m-%d")
-    headers = {}
-    if OPENALEX_EMAIL:
-        headers["User-Agent"] = f"SmallFarmGlobal/1.0 (mailto:{OPENALEX_EMAIL})"
+    current_year = datetime.now().year
+    headers = {"User-Agent": "SmallFarmGlobal/1.0"}
+    if SEMANTIC_SCHOLAR_API_KEY:
+        headers["x-api-key"] = SEMANTIC_SCHOLAR_API_KEY
 
+    rate_limit_hits = 0
     for query in SEARCH_QUERIES:
+        if len(items) >= MAX_PAPERS_PER_RUN:
+            break
+
         try:
             params = {
-                "search": query,
-                "filter": f"from_publication_date:{since_date}",
-                "sort": "publication_date:desc",
-                "per_page": 5,  # Limit per query to stay within rate limits
+                "query": query,
+                "fields": "paperId,title,abstract,url,year,publicationDate,authors,citationCount,externalIds,venue,tldr,openAccessPdf",
+                "year": f"{current_year - 1}-{current_year}",
+                "limit": MAX_PAPERS_PER_QUERY,
             }
-            if OPENALEX_EMAIL:
-                params["mailto"] = OPENALEX_EMAIL
 
             resp = requests.get(
-                f"{OPENALEX_BASE}/works",
+                f"{SEMANTIC_SCHOLAR_BASE}/paper/search",
                 params=params,
                 headers=headers,
                 timeout=30
             )
+            if resp.status_code == 429:
+                rate_limit_hits += 1
+                retry_after = int(resp.headers.get("Retry-After", "10"))
+                logger.warning(f"  Semantic Scholar rate limit hit; waiting {retry_after}s")
+                time.sleep(min(retry_after, 60))
+                if rate_limit_hits >= 2:
+                    logger.warning("  Stopping Semantic Scholar collection after repeated rate limits")
+                    break
+                continue
+
             resp.raise_for_status()
+            rate_limit_hits = 0
             data = resp.json()
 
-            for work in data.get("results", []):
-                url = work.get("doi") or work.get("id", "")
-                if url in existing_urls:
+            query_added = 0
+            for paper in data.get("data", []):
+                url = _paper_url(paper)
+                if not url or url in seen_urls:
                     continue
 
-                # Extract abstract
-                abstract = ""
-                if work.get("abstract_inverted_index"):
-                    # Reconstruct abstract from inverted index
-                    inv = work["abstract_inverted_index"]
-                    word_positions = []
-                    for word, positions in inv.items():
-                        for pos in positions:
-                            word_positions.append((pos, word))
-                    word_positions.sort()
-                    abstract = " ".join(w for _, w in word_positions)
+                date = paper.get("publicationDate") or (str(paper.get("year")) if paper.get("year") else "")
+                if not date:
+                    continue
 
                 items.append({
                     "type": "paper",
-                    "title": work.get("title", "Untitled"),
-                    "source": "OpenAlex",
-                    "date": work.get("publication_date", ""),
-                    "content": abstract,
+                    "title": paper.get("title", "Untitled"),
+                    "source": "Semantic Scholar",
+                    "date": date,
+                    "content": paper.get("abstract", ""),
                     "source_url": url,
                     "authors": [
-                        a.get("author", {}).get("display_name", "")
-                        for a in (work.get("authorships") or [])[:5]
+                        author.get("name", "")
+                        for author in (paper.get("authors") or [])[:5]
                     ],
-                    "cited_by_count": work.get("cited_by_count", 0),
+                    "cited_by_count": paper.get("citationCount", 0),
+                    "summary_en": _paper_summary(paper),
+                    "summary_ja": "",
+                    "tags": [query],
+                    "bottlenecks": [],
+                    "success_factors": [],
+                    "ai_confidence": None,
+                    "analyzed_at": "",
+                    "venue": paper.get("venue", ""),
+                    "open_access_pdf": (paper.get("openAccessPdf") or {}).get("url", ""),
                     "query": query,
                     "collected_at": datetime.now().isoformat()
                 })
-                existing_urls.add(url)
+                seen_urls.add(url)
+                query_added += 1
 
-            logger.info(f"  Query '{query}': found {len(data.get('results', []))} papers")
+                if len(items) >= MAX_PAPERS_PER_RUN:
+                    break
+
+            logger.info(f"  Query '{query}': found {len(data.get('data', []))} papers, {query_added} new")
 
         except requests.RequestException as e:
             logger.warning(f"  Query '{query}' failed: {e}")
             continue
 
-    logger.info(f"OpenAlex total: {len(items)} new papers")
+        time.sleep(1)
+
+    logger.info(f"Semantic Scholar total: {len(items)} new papers")
     return items
 
 
@@ -259,17 +339,19 @@ def main():
 
     date_str = datetime.now().strftime("%Y-%m-%d")
 
-    # Collect from all sources
-    papers = collect_openalex()
+    # Collect papers without Gemini, and send only news to raw Gemini analysis.
+    papers = collect_semantic_scholar()
+    if papers:
+        _merge_semantic_papers(papers)
+
     news = collect_rss()
 
-    all_items = papers + news
-    logger.info(f"Total collected: {len(all_items)} items ({len(papers)} papers, {len(news)} news)")
+    logger.info(f"Total collected: {len(papers)} papers, {len(news)} news articles")
 
-    if all_items:
-        save_collected(all_items, date_str)
+    if news:
+        save_collected(news, date_str)
     else:
-        logger.info("No new items collected today.")
+        logger.info("No new news items collected today.")
 
     logger.info("Collection complete!")
 

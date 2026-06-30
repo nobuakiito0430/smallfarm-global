@@ -14,7 +14,7 @@ import json
 import re
 import logging
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 # pyrefly: ignore [missing-import]
@@ -29,7 +29,7 @@ DATA_DIR = BASE_DIR / "data"
 RAW_DIR = DATA_DIR / "raw"
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-MODEL_NAME = "gemini-2.0-flash"  # 1500 req/day free tier (2.5-flash is only 20/day!)
+MODEL_NAME = os.environ.get("GEMINI_MODEL") or "gemini-2.0-flash"
 MAX_ITEMS_PER_RUN = 30  # Stay within free tier limits
 RETRY_DELAY = 10  # seconds between retries (increased for rate limits)
 CONFIDENCE_THRESHOLD = 40  # Reject analyses below this confidence
@@ -40,6 +40,23 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s"
 )
 logger = logging.getLogger("analyze")
+
+
+class QuotaLimitError(Exception):
+    """Raised when Gemini reports a quota or rate-limit error."""
+
+
+def is_quota_error(error: Exception) -> bool:
+    """Detect quota/rate-limit errors from Gemini client exceptions."""
+    message = str(error).lower()
+    return any(term in message for term in [
+        "429",
+        "quota",
+        "rate limit",
+        "rate_limit",
+        "resource exhausted",
+        "too many requests",
+    ])
 
 # ── Gemini Setup ─────────────────────────────────────────────────
 
@@ -102,6 +119,8 @@ def analyze_article(model, article: dict) -> dict | None:
             if attempt < 2:
                 time.sleep(RETRY_DELAY)
         except Exception as e:
+            if is_quota_error(e):
+                raise QuotaLimitError(str(e)) from e
             logger.warning(f"  API error (attempt {attempt + 1}): {e}")
             if attempt < 2:
                 time.sleep(RETRY_DELAY * (attempt + 1))
@@ -176,6 +195,8 @@ def verify_analysis(model, article: dict, analysis: dict) -> dict:
         return analysis
 
     except Exception as e:
+        if is_quota_error(e):
+            raise QuotaLimitError(str(e)) from e
         logger.warning(f"  Verification failed: {e}")
         analysis["verification"] = {"passed": False, "error": str(e)}
         return analysis
@@ -212,31 +233,6 @@ def save_data(data: list, filename: str):
 
 # ── Merge Functions ──────────────────────────────────────────────
 
-def merge_paper(existing_papers: list, analysis: dict, raw_item: dict) -> list:
-    """Merge a new paper analysis into the papers list."""
-    entry = {
-        "title": raw_item.get("title", ""),
-        "source": raw_item.get("source", ""),
-        "date": raw_item.get("date", ""),
-        "source_url": raw_item.get("source_url", ""),
-        "authors": raw_item.get("authors", []),
-        "cited_by_count": raw_item.get("cited_by_count", 0),
-        "summary_ja": analysis.get("summary_ja", ""),
-        "summary_en": analysis.get("summary_en", ""),
-        "tags": analysis.get("tags", []),
-        "bottlenecks": analysis.get("bottlenecks", []),
-        "success_factors": analysis.get("success_factors", []),
-        "ai_confidence": analysis.get("ai_confidence", 50),
-        "analyzed_at": analysis.get("analyzed_at", "")
-    }
-    existing_papers.append(entry)
-
-    # Keep only last 30 days
-    cutoff = (datetime.now() - __import__("datetime").timedelta(days=30)).strftime("%Y-%m-%d")
-    existing_papers = [p for p in existing_papers if (p.get("date", "") >= cutoff or not p.get("date"))]
-
-    return existing_papers
-
 
 def merge_news(existing_news: list, analysis: dict, raw_item: dict) -> list:
     """Merge a new news analysis into the news list."""
@@ -256,7 +252,7 @@ def merge_news(existing_news: list, analysis: dict, raw_item: dict) -> list:
     existing_news.append(entry)
 
     # Keep only last 30 days
-    cutoff = (datetime.now() - __import__("datetime").timedelta(days=30)).strftime("%Y-%m-%d")
+    cutoff = (datetime.now() - timedelta(days=30)).strftime("%Y-%m-%d")
     existing_news = [n for n in existing_news if (n.get("date", "") >= cutoff or not n.get("date"))]
 
     return existing_news
@@ -329,23 +325,47 @@ def main():
         logger.info("No items to analyze.")
         return
 
-    # Setup Gemini
-    model = setup_gemini()
-
     # Load existing data
     existing_projects = load_existing_data("projects.json")
-    existing_papers = load_existing_data("papers.json")
     existing_news = load_existing_data("news.json")
+    existing_news_urls = {
+        item.get("source_url")
+        for item in existing_news
+        if item.get("source_url")
+    }
+    raw_items = [
+        item for item in raw_items
+        if item.get("type") == "news"
+    ]
+    candidate_items = [
+        item for item in raw_items
+        if item.get("source_url")
+        and item.get("source_url") not in existing_news_urls
+    ][:MAX_ITEMS_PER_RUN]
+
+    if not candidate_items:
+        logger.info("No new news items to analyze.")
+        return
+
+    logger.info(f"Gemini budget: analyzing {len(candidate_items)} news item(s), max {MAX_ITEMS_PER_RUN} per run")
+
+    # Setup Gemini only after there is confirmed news work to process.
+    model = setup_gemini()
 
     # Analyze each item
     analyzed = 0
     relevant = 0
     rejected_low_confidence = 0
 
-    for i, item in enumerate(raw_items[:MAX_ITEMS_PER_RUN]):
-        logger.info(f"[{i+1}/{min(len(raw_items), MAX_ITEMS_PER_RUN)}] Analyzing: {item.get('title', '')[:60]}...")
+    for i, item in enumerate(candidate_items):
+        logger.info(f"[{i+1}/{len(candidate_items)}] Analyzing news: {item.get('title', '')[:60]}...")
 
-        result = analyze_article(model, item)
+        try:
+            result = analyze_article(model, item)
+        except QuotaLimitError as e:
+            logger.error(f"Gemini quota/rate limit reached. Stopping without further retries: {e}")
+            break
+
         if not result:
             logger.warning(f"  Skipped (analysis failed)")
             continue
@@ -377,11 +397,7 @@ def main():
                     f"bottlenecks: {len(result.get('bottlenecks', []))}, "
                     f"success_factors: {len(result.get('success_factors', []))})")
 
-        # Merge into appropriate data files
-        if item.get("type") == "paper":
-            existing_papers = merge_paper(existing_papers, result, item)
-        else:
-            existing_news = merge_news(existing_news, result, item)
+        existing_news = merge_news(existing_news, result, item)
 
         # Check if a new project was discovered
         existing_projects = merge_project(existing_projects, result, item)
@@ -391,7 +407,6 @@ def main():
 
     # Save updated data
     save_data(existing_projects, "projects.json")
-    save_data(existing_papers, "papers.json")
     save_data(existing_news, "news.json")
 
     logger.info("=" * 60)

@@ -28,12 +28,13 @@ jobs:
       - name: Collect new articles and papers
         run: python pipeline/collect.py
         env:
-          OPENALEX_EMAIL: ${{ secrets.OPENALEX_EMAIL }}
+          SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
 
-      - name: Analyze with Gemini API
+      - name: Analyze news with Gemini API
         run: python pipeline/analyze.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
 
       - name: Update statistics
         run: python pipeline/update_stats.py
