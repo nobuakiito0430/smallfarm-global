@@ -29,6 +29,9 @@ jobs:
         run: python pipeline/collect.py
         env:
           SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
+          MAX_PAPERS_PER_QUERY: 2
+          MAX_PAPERS_PER_RUN: 6
+          SEMANTIC_SCHOLAR_DELAY: 5
 
       - name: Analyze news with Gemini API
         run: python pipeline/analyze.py

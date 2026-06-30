@@ -28,8 +28,10 @@ RAW_DIR = DATA_DIR / "raw"
 
 SEMANTIC_SCHOLAR_API_KEY = os.environ.get("SEMANTIC_SCHOLAR_API_KEY", "")
 SEMANTIC_SCHOLAR_BASE = "https://api.semanticscholar.org/graph/v1"
-MAX_PAPERS_PER_QUERY = int(os.environ.get("MAX_PAPERS_PER_QUERY", "5"))
-MAX_PAPERS_PER_RUN = int(os.environ.get("MAX_PAPERS_PER_RUN", "12"))
+MAX_PAPERS_PER_QUERY = int(os.environ.get("MAX_PAPERS_PER_QUERY", "2"))
+MAX_PAPERS_PER_RUN = int(os.environ.get("MAX_PAPERS_PER_RUN", "6"))
+SEMANTIC_SCHOLAR_DELAY = float(os.environ.get("SEMANTIC_SCHOLAR_DELAY", "5.0"))
+SEMANTIC_SCHOLAR_RETRIES = int(os.environ.get("SEMANTIC_SCHOLAR_RETRIES", "2"))
 
 # Search queries for Semantic Scholar
 SEARCH_QUERIES = [
@@ -185,33 +187,49 @@ def collect_semantic_scholar() -> list:
         if len(items) >= MAX_PAPERS_PER_RUN:
             break
 
-        try:
-            params = {
-                "query": query,
-                "fields": "paperId,title,abstract,url,year,publicationDate,authors,citationCount,externalIds,venue,tldr,openAccessPdf",
-                "year": f"{current_year - 1}-{current_year}",
-                "limit": MAX_PAPERS_PER_QUERY,
-            }
+        params = {
+            "query": query,
+            "fields": "paperId,title,abstract,url,year,publicationDate,authors,citationCount,externalIds,venue,tldr,openAccessPdf",
+            "year": f"{current_year - 1}-{current_year}",
+            "limit": MAX_PAPERS_PER_QUERY,
+        }
 
-            resp = requests.get(
-                f"{SEMANTIC_SCHOLAR_BASE}/paper/search",
-                params=params,
-                headers=headers,
-                timeout=30
-            )
-            if resp.status_code == 429:
-                rate_limit_hits += 1
-                retry_after = int(resp.headers.get("Retry-After", "10"))
-                logger.warning(f"  Semantic Scholar rate limit hit; waiting {retry_after}s")
-                time.sleep(min(retry_after, 60))
-                if rate_limit_hits >= 2:
-                    logger.warning("  Stopping Semantic Scholar collection after repeated rate limits")
-                    break
+        try:
+            data = None
+            for attempt in range(SEMANTIC_SCHOLAR_RETRIES + 1):
+                resp = requests.get(
+                    f"{SEMANTIC_SCHOLAR_BASE}/paper/search",
+                    params=params,
+                    headers=headers,
+                    timeout=30
+                )
+
+                if resp.status_code == 429:
+                    rate_limit_hits += 1
+                    retry_after = int(resp.headers.get("Retry-After", "10"))
+                    wait_time = min(max(retry_after, SEMANTIC_SCHOLAR_DELAY), 60)
+                    logger.warning(f"  Semantic Scholar rate limit hit; waiting {wait_time:.0f}s")
+                    time.sleep(wait_time)
+                    if rate_limit_hits >= 2:
+                        logger.warning("  Stopping Semantic Scholar collection after repeated rate limits")
+                        return items
+                    continue
+
+                if 500 <= resp.status_code < 600 and attempt < SEMANTIC_SCHOLAR_RETRIES:
+                    wait_time = SEMANTIC_SCHOLAR_DELAY * (attempt + 1)
+                    logger.warning(f"  Semantic Scholar server error {resp.status_code}; retrying in {wait_time:.0f}s")
+                    time.sleep(wait_time)
+                    continue
+
+                resp.raise_for_status()
+                data = resp.json()
+                break
+
+            if data is None:
+                logger.warning(f"  Query '{query}' skipped after retries")
                 continue
 
-            resp.raise_for_status()
             rate_limit_hits = 0
-            data = resp.json()
 
             query_added = 0
             for paper in data.get("data", []):
@@ -259,7 +277,7 @@ def collect_semantic_scholar() -> list:
             logger.warning(f"  Query '{query}' failed: {e}")
             continue
 
-        time.sleep(1)
+        time.sleep(SEMANTIC_SCHOLAR_DELAY)
 
     logger.info(f"Semantic Scholar total: {len(items)} new papers")
     return items
