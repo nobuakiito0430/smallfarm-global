@@ -1279,5 +1279,82 @@
     "ai_confidence": 93,
     "last_updated": "2026-06-30",
     "coordinates": null
+  },
+  {
+    "id": "adaptation-fund-climate-innova",
+    "name": "Adaptation Fund Climate Innovation Accelerator (AFCIA)",
+    "name_ja": "Adaptation Fund Climate Innovation Accelerator (AFCIA)",
+    "country": [
+      "Nepal"
+    ],
+    "country_ja": [
+      "Nepal"
+    ],
+    "region": "South Asia",
+    "flag": "🌍",
+    "implementer": "United Nations World Food Programme (WFP), Ministry of Agriculture, Forests and Environment",
+    "start_year": null,
+    "end_year": null,
+    "status": "active",
+    "approach": [
+      "climate-smart",
+      "digital",
+      "financial-inclusion",
+      "market-oriented",
+      "value-chain"
+    ],
+    "approach_ja": [
+      "climate-smart",
+      "digital",
+      "financial-inclusion",
+      "market-oriented",
+      "value-chain"
+    ],
+    "target_crops": [
+      "indigenous crops"
+    ],
+    "climate_relevance": "high",
+    "description_en": "WFP and the Government of Nepal have launched the implementation phase of the Adaptation Fund Climate Innovation Accelerator (AFCIA) to strengthen climate resilience for smallholders. The program supports four local startups focusing on digital advisory, insurance, and market and value chain innovations to help farmers adapt to climate risks.",
+    "description_ja": "ネパールにて国連世界食糧計画（WFP）と政府が、適応基金気候イノベーション・アクセラレーター（AFCIA）の実施フェーズを開始しました。本プログラムは、気候変動リスクへの適応を支援するため、デジタルツールや市場参入・バリューチェーン革新を行う現地スタートアップ4社を支援し、小規模農家の強靭性強化を図ります。",
+    "outcomes": {
+      "income_change_pct": null,
+      "participants": null,
+      "key_result": "278件の応募から選ばれた4社のスタートアップが、技術的支援、メンターシップ、資金提供を受け、インパクトと拡張性の高いソリューションのテストと洗練を開始した。"
+    },
+    "bottlenecks": [
+      {
+        "category": "climate_risk",
+        "description": "洪水、干ばつ、熱波などの極端な気象事象が小規模農家の生活や食料システムを脅かしている。",
+        "severity": "high",
+        "evidence_quote": "The solutions are designed to help communities better adapt to rising climate risks - including floods, droughts, heatwaves and extreme weather - that threaten lives, livelihoods and food systems across the country.",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "public_private",
+        "description": "政府、開発パートナー、学術界、民間セクターが連携し、気候変動に強いソリューションの拡大を目指している。",
+        "evidence_quote": "The event brought together representatives from government, development partners, academia and the private sector to explore pathways for scaling climate-smart solutions nationwide.",
+        "is_explicit": true
+      },
+      {
+        "category": "ict_use",
+        "description": "デジタルアドバイザリープラットフォームや衛星ベースの保険ツール、デジタル化された有機バリューチェーンを活用している。",
+        "evidence_quote": "The accelerator supports local start-ups to pilot and scale solutions across the food system, including solar-powered irrigation and clean energy solutions, digital advisory platforms for farmers, satellite-based insurance and climate data tools and market and value chain innovations for smallholders.",
+        "is_explicit": true
+      }
+    ],
+    "tags": [
+      "Nepal",
+      "WFP",
+      "Climate Resilience",
+      "Smallholder Farmers",
+      "Innovation",
+      "Food Systems"
+    ],
+    "source_url": "https://reliefweb.int/report/nepal/wfp-and-government-nepal-launch-innovation-accelerator-climate-and-food-security",
+    "ai_confidence": 94,
+    "last_updated": "2026-06-30",
+    "coordinates": null
   }
 ]

@@ -1,16 +1,16 @@
 {
-  "total_projects": 17,
-  "total_countries": 8,
+  "total_projects": 18,
+  "total_countries": 9,
   "total_beneficiaries": 125088000,
   "total_beneficiaries_display": "1.3億",
   "avg_income_change_pct": 41,
   "total_papers": 1,
-  "total_news": 3,
+  "total_news": 8,
   "last_updated": "2026-06-30",
   "regions": {
     "Sub-Saharan Africa": 8,
     "Multiple": 6,
-    "South Asia": 3
+    "South Asia": 4
   },
   "implementers": {
     "JICA": 9,
@@ -20,7 +20,8 @@
     "M-Farm Ltd.": 1,
     "Green Dreams TECH": 1,
     "Cornell University / Various NGOs": 1,
-    "FAO": 1
+    "FAO": 1,
+    "United Nations World Food Programme (WFP), Ministry of Agriculture, Forests and Environment": 1
   },
   "bottleneck_frequency": {
     "input_market": 6,
@@ -28,7 +29,7 @@
     "knowledge_gap": 6,
     "institutional": 5,
     "market_access": 5,
-    "climate_risk": 3,
+    "climate_risk": 4,
     "financial_access": 3,
     "post_harvest": 2,
     "gender": 1
@@ -38,18 +39,18 @@
     "market_linkage": 6,
     "institutional_integration": 5,
     "phased_scaleup": 5,
+    "public_private": 5,
+    "ict_use": 5,
     "behavioral_change": 4,
-    "public_private": 4,
-    "ict_use": 4,
     "gender_mainstream": 2
   },
   "approaches": {
-    "market-oriented": 7,
-    "value-chain": 4,
-    "climate-smart": 3,
+    "market-oriented": 8,
+    "value-chain": 5,
+    "climate-smart": 4,
+    "digital": 3,
+    "financial-inclusion": 2,
     "input-market": 2,
-    "digital": 2,
-    "financial-inclusion": 1,
     "cooperative": 1
   },
   "timeline": [
@@ -57,6 +58,12 @@
       "date": "2026-06-30",
       "title": "Emergency Support for Food Security Project データ更新",
       "description": "世界銀行は、バングラデシュの食料安全保障と生活を保護するため、11億ドルの緊急支援を承認しました。この支援は、肥料や燃料市場の価格変動と供給不足の影響を緩和し、...",
+      "type": "update"
+    },
+    {
+      "date": "2026-06-30",
+      "title": "Adaptation Fund Climate Innovation Accelerator (AFCIA) データ更新",
+      "description": "ネパールにて国連世界食糧計画（WFP）と政府が、適応基金気候イノベーション・アクセラレーター（AFCIA）の実施フェーズを開始しました。本プログラムは、気候変動...",
       "type": "update"
     },
     {
@@ -75,12 +82,6 @@
       "date": "2025-02-15",
       "title": "CARD Phase 2 データ更新",
       "description": "アフリカ稲作振興のための連合（CARD）フェーズ2。2030年までにサブサハラアフリカの稲作生産量倍増を目指す。改良品種、灌漑整備、市場開発を推進。...",
-      "type": "update"
-    },
-    {
-      "date": "2025-02-10",
-      "title": "M-SHEP データ更新",
-      "description": "マラウイにおけるSHEPアプローチの適用。内陸国特有の市場アクセス課題と気候脆弱性に対応した適応型モデル。...",
       "type": "update"
     }
   ]

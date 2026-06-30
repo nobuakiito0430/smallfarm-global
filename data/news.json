@@ -145,5 +145,196 @@
     ],
     "ai_confidence": 93,
     "analyzed_at": "2026-06-30T16:38:07.374328"
+  },
+  {
+    "title": "Nepal Context Report - June 26, 2026",
+    "source": "ReliefWeb Agriculture",
+    "date": "2026-06-27",
+    "source_url": "https://reliefweb.int/report/nepal/nepal-context-report-june-26-2026",
+    "summary_ja": "ネパールは地形や気候の多様性により地域間で市場アクセスに格差があり、小規模農家は雨水依存の農業や出稼ぎに大きく依存している。地理的制約、インフラ不足、気候変動による災害が農家の商業的発展や食料安全保障を阻害する構造的な障壁となっている。",
+    "summary_en": "Nepal's agroecological diversity creates significant regional disparities in market access, with smallholders largely reliant on rainfed agriculture and remittances. Structural constraints, including geographic isolation, limited infrastructure, and recurrent climatic shocks, impede the commercialization of smallholder agriculture and threaten food security.",
+    "tags": [
+      "Nepal",
+      "Smallholder Agriculture",
+      "Food Security",
+      "Climate Resilience",
+      "Market Access"
+    ],
+    "bottlenecks": [
+      {
+        "category": "market_access",
+        "description": "地形的要因やインフラの未整備により、市場へのアクセスが限定的である。",
+        "severity": "high",
+        "evidence_quote": "The Hills and Mountains face structural production deficits due to limited arable land, lower productivity, and high transportation costs.",
+        "is_explicit": true
+      },
+      {
+        "category": "institutional",
+        "description": "小規模で断片化された農地が、食料不安のリスクを高めている。",
+        "severity": "high",
+        "evidence_quote": "High levels of poverty, small and fragmented landholdings, and uneven access to markets, infrastructure, and services contribute to persistent risk of acute food insecurity",
+        "is_explicit": true
+      },
+      {
+        "category": "climate_risk",
+        "description": "洪水や地滑りなどの自然災害が農業生産を阻害し、市場機能を一時的に麻痺させている。",
+        "severity": "high",
+        "evidence_quote": "Recurrent shocks — including floods, landslides, droughts, and economic disruptions — further constrain livelihoods, disrupt agricultural production, and limit market functioning.",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [],
+    "ai_confidence": 91,
+    "analyzed_at": "2026-06-30T16:49:42.314941"
+  },
+  {
+    "title": "World: Open letter to address hunger, food insecurity and malnutrition",
+    "source": "ReliefWeb Agriculture",
+    "date": "2026-06-22",
+    "source_url": "https://reliefweb.int/report/world/open-letter-address-hunger-food-insecurity-and-malnutrition",
+    "summary_ja": "本記事は、紛争、経済不安定、気候変動が世界の食料システムに与える影響について、宗教系NGO団体が連名で発表した公開書簡です。脆弱な地域における食料供給網の保護や、小規模農家および気候変動に適応した農業への支援を政府や国際機関に強く求めています。",
+    "summary_en": "This open letter, issued by global faith-based organizations, addresses the global hunger crisis driven by conflict, economic instability, and climate shocks. It calls on governments and international institutions to prioritize humanitarian access, strengthen resilient food systems, and provide direct support to smallholder farmers and climate-resilient agriculture.",
+    "tags": [
+      "hunger",
+      "food insecurity",
+      "smallholder farmers",
+      "climate-resilient agriculture",
+      "humanitarian access"
+    ],
+    "bottlenecks": [
+      {
+        "category": "market_access",
+        "description": "紛争や混乱による食料供給網、市場、インフラの破壊が、食料価格の上昇と入手困難を招いています。",
+        "severity": "high",
+        "evidence_quote": "The destruction of livelihoods, agricultural systems, markets and infrastructure is devastating communities directly affected by violence. At the same time, disruptions to energy supplies, fertiliser markets, shipping routes and humanitarian access are sending shockwaves through global food systems",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "institutional_integration",
+        "description": "政府や国際機関が、小規模農家や気候適応型農業を支援する政策を優先的に実施することが成功の鍵として示唆されています。",
+        "evidence_quote": "We therefore call on governments, multilateral institutions, donors and faith communities to: ... Support smallholder farmers, local food producers and climate-resilient agriculture, especially in fragile and conflict-affected contexts.",
+        "is_explicit": true
+      }
+    ],
+    "ai_confidence": 83,
+    "analyzed_at": "2026-06-30T16:49:47.326948"
+  },
+  {
+    "title": "Benin Context Report, June 11, 2026",
+    "source": "ReliefWeb Agriculture",
+    "date": "2026-06-11",
+    "source_url": "https://reliefweb.int/report/benin/benin-context-report-june-11-2026",
+    "summary_ja": "ベナンは雨水依存の小規模農家が主体であり、南部では市場統合が進んでいる一方、北部は紛争や異常気象の影響を受けています。食料安全保障上の懸念が高まる中、農家は価格高騰や市場アクセスの制限といった構造的な課題に直面しています。",
+    "summary_en": "Benin's agriculture is dominated by rainfed smallholders, with relatively strong market integration in the south but significant challenges in the north. The sector faces structural vulnerabilities, including conflict, erratic rainfall, and rising input costs, which hinder stability and food security.",
+    "tags": [
+      "Benin",
+      "Smallholder Agriculture",
+      "Food Insecurity",
+      "Market Access"
+    ],
+    "bottlenecks": [
+      {
+        "category": "market_access",
+        "description": "北部では治安悪化により移動が制限され、市場へのアクセスが困難になっています。",
+        "severity": "high",
+        "evidence_quote": "Growing insecurity is disrupting livelihoods, restricting mobility, limiting access to agricultural land and markets, and driving forced, often repeated displacements.",
+        "is_explicit": true
+      },
+      {
+        "category": "input_market",
+        "description": "農業資材の価格上昇が農家の購買力を低下させています。",
+        "severity": "high",
+        "evidence_quote": "Rising food, fuel, and agricultural input prices, especially in conflict-affected areas, are also eroding purchasing power for poor households.",
+        "is_explicit": true
+      },
+      {
+        "category": "climate_risk",
+        "description": "洪水や降雨パターンの不安定さが農業生産の障壁となっています。",
+        "severity": "high",
+        "evidence_quote": "Additional hazards include recurrent flooding in southern and riverine areas and erratic rainfall and dry spells in the north.",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [],
+    "ai_confidence": 86,
+    "analyzed_at": "2026-06-30T16:49:52.185978"
+  },
+  {
+    "title": "WFP and Government of Nepal Launch Innovation Accelerator for Climate and Food Security",
+    "source": "ReliefWeb Agriculture",
+    "date": "2026-06-08",
+    "source_url": "https://reliefweb.int/report/nepal/wfp-and-government-nepal-launch-innovation-accelerator-climate-and-food-security",
+    "summary_ja": "ネパールにて国連世界食糧計画（WFP）と政府が、適応基金気候イノベーション・アクセラレーター（AFCIA）の実施フェーズを開始しました。本プログラムは、気候変動リスクへの適応を支援するため、デジタルツールや市場参入・バリューチェーン革新を行う現地スタートアップ4社を支援し、小規模農家の強靭性強化を図ります。",
+    "summary_en": "WFP and the Government of Nepal have launched the implementation phase of the Adaptation Fund Climate Innovation Accelerator (AFCIA) to strengthen climate resilience for smallholders. The program supports four local startups focusing on digital advisory, insurance, and market and value chain innovations to help farmers adapt to climate risks.",
+    "tags": [
+      "Nepal",
+      "WFP",
+      "Climate Resilience",
+      "Smallholder Farmers",
+      "Innovation",
+      "Food Systems"
+    ],
+    "bottlenecks": [
+      {
+        "category": "climate_risk",
+        "description": "洪水、干ばつ、熱波などの極端な気象事象が小規模農家の生活や食料システムを脅かしている。",
+        "severity": "high",
+        "evidence_quote": "The solutions are designed to help communities better adapt to rising climate risks - including floods, droughts, heatwaves and extreme weather - that threaten lives, livelihoods and food systems across the country.",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "public_private",
+        "description": "政府、開発パートナー、学術界、民間セクターが連携し、気候変動に強いソリューションの拡大を目指している。",
+        "evidence_quote": "The event brought together representatives from government, development partners, academia and the private sector to explore pathways for scaling climate-smart solutions nationwide.",
+        "is_explicit": true
+      },
+      {
+        "category": "ict_use",
+        "description": "デジタルアドバイザリープラットフォームや衛星ベースの保険ツール、デジタル化された有機バリューチェーンを活用している。",
+        "evidence_quote": "The accelerator supports local start-ups to pilot and scale solutions across the food system, including solar-powered irrigation and clean energy solutions, digital advisory platforms for farmers, satellite-based insurance and climate data tools and market and value chain innovations for smallholders.",
+        "is_explicit": true
+      }
+    ],
+    "ai_confidence": 94,
+    "analyzed_at": "2026-06-30T16:49:59.951506"
+  },
+  {
+    "title": "Honduras: Key Message Update - Fuel and fertilizer price increases compound delayed primera planting, May - September 2026",
+    "source": "ReliefWeb Agriculture",
+    "date": "2026-06-01",
+    "source_url": "https://reliefweb.int/report/honduras/honduras-key-message-update-fuel-and-fertilizer-price-increases-compound-delayed-primera-planting-may-september-2026",
+    "summary_ja": "ホンジュラスでは燃料・肥料価格の高騰と降雨不足により、小規模農家の生産コストが増大し、作付けの遅延や収量減少が懸念されている。これらの要因が農家の商業的生産活動を強く圧迫しており、食料不安を悪化させている。",
+    "summary_en": "In Honduras, rising fuel and fertilizer costs combined with below-average rainfall are increasing production costs and delaying planting for smallholders, with expected negative impacts on crop yields. These factors are severely hindering agricultural production and exacerbating food insecurity for small-scale farmers.",
+    "tags": [
+      "Honduras",
+      "smallholder",
+      "agriculture",
+      "fertilizer",
+      "climate",
+      "food security"
+    ],
+    "bottlenecks": [
+      {
+        "category": "input_market",
+        "description": "肥料や燃料の価格が高騰し、生産コストを押し上げている。",
+        "severity": "high",
+        "evidence_quote": "Above-average fuel and fertilizer prices continue to drive high production and transportation costs for a second consecutive month.",
+        "is_explicit": true
+      },
+      {
+        "category": "climate_risk",
+        "description": "降雨不足により、土壌水分が不足し、作付け開始が遅延している。",
+        "severity": "high",
+        "evidence_quote": "Recent rainfall estimates through mid-May indicate widespread below-average precipitation across Honduras, negatively impacting primera land preparation and planting in localized areas.",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [],
+    "ai_confidence": 91,
+    "analyzed_at": "2026-06-30T16:50:04.567049"
   }
 ]
