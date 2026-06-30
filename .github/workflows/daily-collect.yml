@@ -35,6 +35,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          MAX_ITEMS_PER_RUN: 10
 
       - name: Update statistics
         run: python pipeline/update_stats.py

@@ -30,7 +30,7 @@ RAW_DIR = DATA_DIR / "raw"
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 MODEL_NAME = os.environ.get("GEMINI_MODEL") or "gemini-2.0-flash"
-MAX_ITEMS_PER_RUN = 30  # Stay within free tier limits
+MAX_ITEMS_PER_RUN = int(os.environ.get("MAX_ITEMS_PER_RUN", "10"))
 RETRY_DELAY = 10  # seconds between retries (increased for rate limits)
 CONFIDENCE_THRESHOLD = 40  # Reject analyses below this confidence
 ENABLE_VERIFICATION = False  # Disable by default to save API quota (set True if using paid tier)
