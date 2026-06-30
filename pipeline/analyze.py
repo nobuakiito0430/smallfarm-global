@@ -363,7 +363,7 @@ def main():
         try:
             result = analyze_article(model, item)
         except QuotaLimitError as e:
-            logger.error(f"Gemini quota/rate limit reached. Stopping without further retries: {e}")
+            logger.warning(f"Gemini quota/rate limit reached. Skipping remaining news analysis: {e}")
             break
 
         if not result:
