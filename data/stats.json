@@ -1,16 +1,17 @@
 {
-  "total_projects": 18,
+  "total_projects": 19,
   "total_countries": 9,
   "total_beneficiaries": 125088000,
   "total_beneficiaries_display": "1.3億",
   "avg_income_change_pct": 41,
   "total_papers": 1,
   "total_news": 9,
-  "last_updated": "2026-06-30",
+  "last_updated": "2026-07-01",
   "regions": {
     "Sub-Saharan Africa": 8,
     "Multiple": 6,
-    "South Asia": 4
+    "South Asia": 4,
+    "Other": 1
   },
   "implementers": {
     "JICA": 9,
@@ -21,7 +22,8 @@
     "Green Dreams TECH": 1,
     "Cornell University / Various NGOs": 1,
     "FAO": 1,
-    "United Nations World Food Programme (WFP), Ministry of Agriculture, Forests and Environment": 1
+    "United Nations World Food Programme (WFP), Ministry of Agriculture, Forests and Environment": 1,
+    "IFAD, World Bank": 1
   },
   "bottleneck_frequency": {
     "input_market": 6,
@@ -45,7 +47,7 @@
     "gender_mainstream": 2
   },
   "approaches": {
-    "market-oriented": 8,
+    "market-oriented": 9,
     "value-chain": 5,
     "climate-smart": 4,
     "digital": 3,
@@ -54,6 +56,12 @@
     "cooperative": 1
   },
   "timeline": [
+    {
+      "date": "2026-07-01",
+      "title": "AgriConnect データ更新",
+      "description": "IFADは、世界銀行のAgriConnectイニシアチブの一環として、少なくとも7,000万人の小規模食料生産者の生活を変革することを誓約しました。この取り組み...",
+      "type": "update"
+    },
     {
       "date": "2026-06-30",
       "title": "Emergency Support for Food Security Project データ更新",
@@ -76,12 +84,6 @@
       "date": "2025-03-01",
       "title": "SHEP PLUS データ更新",
       "description": "SHEPアプローチのケニア全国農業普及システムへの制度化・スケールアップ。全47カウンティへの展開を目指し、政府の既存システムにSHEP手法を統合。...",
-      "type": "update"
-    },
-    {
-      "date": "2025-02-15",
-      "title": "CARD Phase 2 データ更新",
-      "description": "アフリカ稲作振興のための連合（CARD）フェーズ2。2030年までにサブサハラアフリカの稲作生産量倍増を目指す。改良品種、灌漑整備、市場開発を推進。...",
       "type": "update"
     }
   ]

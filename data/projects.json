@@ -1356,5 +1356,45 @@
     "ai_confidence": 94,
     "last_updated": "2026-06-30",
     "coordinates": null
+  },
+  {
+    "id": "agriconnect",
+    "name": "AgriConnect",
+    "name_ja": "AgriConnect",
+    "country": [],
+    "country_ja": [],
+    "region": "Other",
+    "flag": "🌍",
+    "implementer": "IFAD, World Bank",
+    "start_year": null,
+    "end_year": null,
+    "status": "active",
+    "approach": [
+      "market-oriented"
+    ],
+    "approach_ja": [
+      "market-oriented"
+    ],
+    "target_crops": [],
+    "climate_relevance": null,
+    "description_en": "IFAD has pledged to transform the lives of at least 70 million small-scale food producers as part of the World Bank’s AgriConnect initiative. The effort aims to support the commercial success and improved livelihoods of small-scale farmers.",
+    "description_ja": "IFADは、世界銀行のAgriConnectイニシアチブの一環として、少なくとも7,000万人の小規模食料生産者の生活を変革することを誓約しました。この取り組みは、小規模農家の商業的な成功と生活向上を支援することを目的としています。",
+    "outcomes": {
+      "income_change_pct": null,
+      "participants": "70 million",
+      "key_result": "IFADは、世界銀行のAgriConnectイニシアチブの一環として、7,000万人以上の小規模食料生産者の生活を変革することを目標としています。"
+    },
+    "bottlenecks": [],
+    "success_factors": [],
+    "tags": [
+      "IFAD",
+      "World Bank",
+      "AgriConnect",
+      "small-scale producers"
+    ],
+    "source_url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPNVpacnp1WjhfUjBkT0Z1N0xXRGdnN3FNNUZYUUNvaVc4OTg5M25CMnVVX3dVQVZLLUNjQ2gzemhXUkNnRG5VWjh6QV9xckhLdU13UmRhTllxT0RSRXhVRFF3TnJqVFcyLXpTUlN0WHhBVXZWTmR5aEtrN21Ic1A0SC02MXotT2twaWVNVFl6Vy1FOVNYVVcycXlTMXpua2tGdlJQdWJiWmlIMWM1cEt2a0hhT2o4NXRMWnMtRmV5aHdrT1drX1U2dmZod3JGX0tzYjRrc2JMcm5wLVpMZURXanVhUDdCRjBUc2lqbUoyeEF4V0p4Rmk2eF9Udw?oc=5",
+    "ai_confidence": 89,
+    "last_updated": "2026-07-01",
+    "coordinates": null
   }
 ]
