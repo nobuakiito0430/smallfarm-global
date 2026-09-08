@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "title": "When water runs dry: how irrigation water scarcity shapes smallholder farmers’ mitigation strategies and migration aspiration in developing countries - nature.com",
+    "source": "Google News Smallholder",
+    "date": "2026-08-20",
+    "source_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1pa1hXdmxYbUVSZl80aDdoY2xLeDcxR2Y5NTFzbGRRLVNiM3ExNHhVTDU5RnhuZ2tOeW9lY090UUZ1YTA1ZmpadTZtdU1aVVVHanMxQVlyeVNaRURCOTQw?oc=5",
+    "summary_ja": "本研究は、灌漑用水の不足が途上国の小規模農家の適応戦略と移住の希望にどのような影響を与えるかを調査した。水不足は農家の農業収入に悪影響を及ぼし、移住意欲を高める要因となっている。",
+    "summary_en": "This study examines how irrigation water scarcity shapes mitigation strategies and migration aspirations among smallholder farmers in developing countries. Findings suggest that water scarcity adversely impacts agricultural income and increases migration aspirations.",
+    "tags": [
+      "smallholder farmers",
+      "irrigation",
+      "water scarcity",
+      "migration",
+      "climate adaptation"
+    ],
+    "bottlenecks": [
+      {
+        "category": "climate_risk",
+        "description": "灌漑用水の不足が農業生産性を低下させ、農家の経済的適応を困難にしている。",
+        "severity": "high",
+        "evidence_quote": "irrigation water scarcity shapes smallholder farmers’ mitigation strategies and migration aspiration",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [],
+    "ai_confidence": 90,
+    "analyzed_at": "2026-09-08T23:16:34.493462"
+  }
+]
