@@ -1798,5 +1798,49 @@
     "ai_confidence": 90,
     "last_updated": "2026-08-25",
     "coordinates": null
+  },
+  {
+    "id": "smallholder-agricultural-marke",
+    "name": "Smallholder Agricultural Market Support Program (Haiti)",
+    "name_ja": "Smallholder Agricultural Market Support Program (Haiti)",
+    "country": [
+      "Haiti"
+    ],
+    "country_ja": [
+      "Haiti"
+    ],
+    "region": "Latin America",
+    "flag": "🌍",
+    "implementer": null,
+    "start_year": null,
+    "end_year": null,
+    "status": "active",
+    "approach": [
+      "market-oriented"
+    ],
+    "approach_ja": [
+      "market-oriented"
+    ],
+    "target_crops": [],
+    "climate_relevance": "none",
+    "description_en": "This article provides a call for expressions of interest (EOI) regarding a Smallholder Agricultural Market Support Program in Haiti. It focuses on facilitating market access and support for small-scale farmers in the region.",
+    "description_ja": "本記事は、ハイチの小規模農家を支援するための市場サポートプログラムに関する提案依頼（EOI）を掲載しています。小規模農家の商業化を促進するためのプログラムの公募情報であり、実施内容の詳細は募集要項に依存します。",
+    "outcomes": {
+      "income_change_pct": null,
+      "participants": null,
+      "key_result": null
+    },
+    "bottlenecks": [],
+    "success_factors": [],
+    "tags": [
+      "Haiti",
+      "Smallholder Farmers",
+      "Market Support",
+      "Agriculture"
+    ],
+    "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPY3duaE1VZUJtMEo3bVA3WE4wZXpLWjJSNl9pVUotLW8xUVVFdHhiTGl3UjFwN19CbTg2SDVkMWxMV3lHX3dGTm9OdlRWMm1OLU5oRllaS016cjlaUUFBaUFjSWswTjB2cGhMeG83MDk5blgzbDRzNGxBelBRdjM0clc3U0pNQV9yd002YmFoZk9LS011ZXZWZktDS2FaZHk5SHNaZDhKWHVBeklKOU1NetIBtgFBVV95cUxOdGl0VmhvSTRFSWxTOUJUUTc3U2pqVlQzSXhtek5SUDU1NTgyN2huTThNR256YlYxdUxZUzZLMTJoWE40THI2NjRwOXJqM09YSm12bnJfTkdhYm8ySDcyRVJVQTl0YTVZeVl3bm9adE9uOVNFX3hrZk9pZU1tUERiZTktQUhHXzhmZG1lLU9PUWFEWEl0UFlRWEZHYVVCc2tweENJanBmNEVmaGlBT0R1VzlINHlUdw?oc=5",
+    "ai_confidence": 94,
+    "last_updated": "2026-09-11",
+    "coordinates": null
   }
 ]

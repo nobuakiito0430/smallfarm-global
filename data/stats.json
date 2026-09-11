@@ -1,22 +1,23 @@
 {
-  "total_projects": 26,
-  "total_countries": 10,
+  "total_projects": 27,
+  "total_countries": 11,
   "total_beneficiaries": 125088000,
   "total_beneficiaries_display": "1.3億",
   "avg_income_change_pct": 41,
   "total_papers": 0,
-  "total_news": 1,
-  "last_updated": "2026-09-10",
+  "total_news": 2,
+  "last_updated": "2026-09-11",
   "regions": {
     "Sub-Saharan Africa": 9,
     "Multiple": 6,
     "Other": 6,
     "South Asia": 4,
-    "Latin America": 1
+    "Latin America": 2
   },
   "implementers": {
     "JICA": 9,
     "World Bank": 3,
+    "null": 2,
     "USAID": 1,
     "IFAD": 1,
     "M-Farm Ltd.": 1,
@@ -26,7 +27,6 @@
     "United Nations World Food Programme (WFP), Ministry of Agriculture, Forests and Environment": 1,
     "IFAD, World Bank": 1,
     "ICTworks": 1,
-    "null": 1,
     "Ministry of Agriculture, Food Security and New Growth Industries, National Meteorological Services, World Food Programme (WFP)": 1,
     "World Food Programme (WFP), Novo Nordisk Foundation, Grundfos Foundation": 1,
     "Common Fund for Commodities (CFC)": 1,
@@ -55,7 +55,7 @@
     "gender_mainstream": 2
   },
   "approaches": {
-    "market-oriented": 13,
+    "market-oriented": 14,
     "value-chain": 7,
     "climate-smart": 7,
     "financial-inclusion": 4,
@@ -65,6 +65,12 @@
     "nutrition": 1
   },
   "timeline": [
+    {
+      "date": "2026-09-11",
+      "title": "Smallholder Agricultural Market Support Program (Haiti) データ更新",
+      "description": "本記事は、ハイチの小規模農家を支援するための市場サポートプログラムに関する提案依頼（EOI）を掲載しています。小規模農家の商業化を促進するためのプログラムの公募...",
+      "type": "update"
+    },
     {
       "date": "2026-08-25",
       "title": "GAFSP grants programme データ更新",
@@ -87,12 +93,6 @@
       "date": "2026-07-08",
       "title": "Anticipatory Action (AA) mechanism for drought データ更新",
       "description": "ベリーズ政府とWFPは、干ばつリスクに備えて小規模農家に対し現金給付を行う「Anticipatory Action」メカニズムを起動しました。この取り組みは、農...",
-      "type": "update"
-    },
-    {
-      "date": "2026-07-08",
-      "title": "third phase scale up of their flagship school meals partnership データ更新",
-      "description": "WFP、Novo Nordisk財団、Grundfos財団は、エチオピア、ケニア、ウガンダにおいて「Home-Grown School Feeding（地元産品...",
       "type": "update"
     }
   ]
