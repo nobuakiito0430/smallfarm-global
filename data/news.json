@@ -43,5 +43,54 @@
     "success_factors": [],
     "ai_confidence": 94,
     "analyzed_at": "2026-09-11T23:05:32.667187"
+  },
+  {
+    "title": "Kenya: Kenya Rebuilds The Cotton Chain From Field To Fabric",
+    "source": "AllAfrica",
+    "date": "2026-09-11",
+    "source_url": "https://allafrica.com/stories/202609110655.html",
+    "summary_ja": "ケニアの沿岸部では、農家が再び綿花栽培に戻っており、新しい製綿所と国内で数少ない統合型紡績工場が連携して、畑から工場までのサプライチェーンを再構築しています。",
+    "summary_en": "Farmers in coastal Kenya are returning to cotton cultivation, while a new ginnery and one of the country's few integrated textile mills are rebuilding the links from field to factory.",
+    "tags": [
+      "Kenya",
+      "Cotton",
+      "Value Chain",
+      "Smallholder Farmers"
+    ],
+    "bottlenecks": [],
+    "success_factors": [
+      {
+        "category": "market_linkage",
+        "description": "製綿所と紡績工場が連携することで、畑から工場までの供給網が再構築されている。",
+        "evidence_quote": "a new ginnery and one of the country's few surviving integrated textile mills are rebuilding links from field to factory."
+      }
+    ],
+    "ai_confidence": 91,
+    "analyzed_at": "2026-09-13T23:01:23.652674"
+  },
+  {
+    "title": "Ghana: A Garment Hub Puts Northern Ghana To Work",
+    "source": "AllAfrica",
+    "date": "2026-09-11",
+    "source_url": "https://allafrica.com/stories/202609110176.html",
+    "summary_ja": "ガーナのサベルグで操業するアパレル企業「Northshore Apparel」は、今後の事業拡大において、縫製ラインと北部ガーナの農家を繋ぎ、地域内のバリューチェーンを構築することを目指している。",
+    "summary_en": "Northshore Apparel, based in Savelugu, is creating formal jobs in the garment sector. The company's future phases aim to connect their production lines with farmers in northern Ghana to develop a more integrated local value chain.",
+    "tags": [
+      "Ghana",
+      "Value Chain",
+      "Garment Industry",
+      "Savelugu"
+    ],
+    "bottlenecks": [],
+    "success_factors": [
+      {
+        "category": "market_linkage",
+        "description": "アパレル生産と現地の農家を接続することで、地域内のバリューチェーンを構築する構想。",
+        "evidence_quote": "Its next phases could connect those sewing lines to northern Ghana's farmers and build a fuller local value chain.",
+        "is_explicit": true
+      }
+    ],
+    "ai_confidence": 83,
+    "analyzed_at": "2026-09-13T23:01:28.766059"
   }
 ]

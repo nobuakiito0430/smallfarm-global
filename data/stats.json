@@ -1,14 +1,14 @@
 {
-  "total_projects": 27,
-  "total_countries": 11,
+  "total_projects": 28,
+  "total_countries": 12,
   "total_beneficiaries": 125088000,
   "total_beneficiaries_display": "1.3億",
   "avg_income_change_pct": 41,
   "total_papers": 0,
-  "total_news": 2,
-  "last_updated": "2026-09-12",
+  "total_news": 4,
+  "last_updated": "2026-09-13",
   "regions": {
-    "Sub-Saharan Africa": 9,
+    "Sub-Saharan Africa": 10,
     "Multiple": 6,
     "Other": 6,
     "South Asia": 4,
@@ -30,7 +30,8 @@
     "Ministry of Agriculture, Food Security and New Growth Industries, National Meteorological Services, World Food Programme (WFP)": 1,
     "World Food Programme (WFP), Novo Nordisk Foundation, Grundfos Foundation": 1,
     "Common Fund for Commodities (CFC)": 1,
-    "GAFSP (Global Agriculture and Food Security Program)": 1
+    "GAFSP (Global Agriculture and Food Security Program)": 1,
+    "Northshore Apparel": 1
   },
   "bottleneck_frequency": {
     "input_market": 6,
@@ -45,7 +46,7 @@
     "value-chain": 1
   },
   "success_factor_frequency": {
-    "market_linkage": 9,
+    "market_linkage": 10,
     "farmer_ownership": 7,
     "institutional_integration": 6,
     "phased_scaleup": 6,
@@ -56,7 +57,7 @@
   },
   "approaches": {
     "market-oriented": 14,
-    "value-chain": 7,
+    "value-chain": 8,
     "climate-smart": 7,
     "financial-inclusion": 4,
     "digital": 4,
@@ -65,6 +66,12 @@
     "nutrition": 1
   },
   "timeline": [
+    {
+      "date": "2026-09-13",
+      "title": "Northshore Apparel データ更新",
+      "description": "ガーナのサベルグで操業するアパレル企業「Northshore Apparel」は、今後の事業拡大において、縫製ラインと北部ガーナの農家を繋ぎ、地域内のバリューチ...",
+      "type": "update"
+    },
     {
       "date": "2026-09-11",
       "title": "Smallholder Agricultural Market Support Program (Haiti) データ更新",
@@ -87,12 +94,6 @@
       "date": "2026-07-09",
       "title": "29th Call for Proposals データ更新",
       "description": "Common Fund for Commodities（CFC）は、小規模農家、持続可能な農業、包摂的なバリューチェーンを支援するための第29回提案募集を開始し...",
-      "type": "update"
-    },
-    {
-      "date": "2026-07-08",
-      "title": "Anticipatory Action (AA) mechanism for drought データ更新",
-      "description": "ベリーズ政府とWFPは、干ばつリスクに備えて小規模農家に対し現金給付を行う「Anticipatory Action」メカニズムを起動しました。この取り組みは、農...",
       "type": "update"
     }
   ]

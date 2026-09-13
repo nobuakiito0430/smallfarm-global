@@ -1842,5 +1842,56 @@
     "ai_confidence": 94,
     "last_updated": "2026-09-11",
     "coordinates": null
+  },
+  {
+    "id": "northshore-apparel",
+    "name": "Northshore Apparel",
+    "name_ja": "Northshore Apparel",
+    "country": [
+      "Ghana"
+    ],
+    "country_ja": [
+      "Ghana"
+    ],
+    "region": "Sub-Saharan Africa",
+    "flag": "🌍",
+    "implementer": "Northshore Apparel",
+    "start_year": null,
+    "end_year": null,
+    "status": "active",
+    "approach": [
+      "value-chain"
+    ],
+    "approach_ja": [
+      "value-chain"
+    ],
+    "target_crops": [],
+    "climate_relevance": "none",
+    "description_en": "Northshore Apparel, based in Savelugu, is creating formal jobs in the garment sector. The company's future phases aim to connect their production lines with farmers in northern Ghana to develop a more integrated local value chain.",
+    "description_ja": "ガーナのサベルグで操業するアパレル企業「Northshore Apparel」は、今後の事業拡大において、縫製ラインと北部ガーナの農家を繋ぎ、地域内のバリューチェーンを構築することを目指している。",
+    "outcomes": {
+      "income_change_pct": null,
+      "participants": null,
+      "key_result": "産業的な野心をフォーマルな雇用へと転換する取り組みが行われている。"
+    },
+    "bottlenecks": [],
+    "success_factors": [
+      {
+        "category": "market_linkage",
+        "description": "アパレル生産と現地の農家を接続することで、地域内のバリューチェーンを構築する構想。",
+        "evidence_quote": "Its next phases could connect those sewing lines to northern Ghana's farmers and build a fuller local value chain.",
+        "is_explicit": true
+      }
+    ],
+    "tags": [
+      "Ghana",
+      "Value Chain",
+      "Garment Industry",
+      "Savelugu"
+    ],
+    "source_url": "https://allafrica.com/stories/202609110176.html",
+    "ai_confidence": 83,
+    "last_updated": "2026-09-13",
+    "coordinates": null
   }
 ]
