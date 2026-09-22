@@ -65,5 +65,31 @@
     ],
     "ai_confidence": 83,
     "analyzed_at": "2026-09-13T23:01:28.766059"
+  },
+  {
+    "title": "Half of world’s smallholder farmers, using just 12% of arable land, could meet additional food needs - Down To Earth",
+    "source": "Google News Smallholder",
+    "date": "2026-09-21",
+    "source_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxONWE4VXhpVnN4MmF1YlVGS1NNa2IyRzBZZ29PTjdveFcwQjM2c3NyYjhEMTRVdm01dVkwRllES3I4clRNOEJ3STMtdm9VeERTS0dzbVVtak1CQlZzMF9SWFVsSmlNbE0zQnNCZE45NlFGUFk1cEt3bVk2SzB2TWF6ZzNIUG9WNEZuVjhIOE5qQzVIeEV4SWJjSFFXWTFpbnR3bTkxeTBPd090dTNBVlFWRHNEakVIVDZvNXhocjRaek4zaXg2T09tdjFRTXZHS19ZdmRBX3pB0gHjAUFVX3lxTE9vME5RdThBWmd5SUlrdEt4VFB1aVBIa0RxMWFPNTdDdTNJMWdIX1RrOWMtQnRKWlhqU1dJUi1iazBlYkNsdkY0dXdFbDVMTFRJX0xYTzBCRFRFV0htR29oRWI1M0dOR0lJNGl0SENOanZENXlDaWkwcjBmOWM4MWJpZTVCU0hSX3pQTGhtYkx0LWFHaFFxREticWpjdVpwcEVnRzBXeFlLcE9ZQzlkS1RPMmwyc3lsNDBCOXJrbkhkQnBRVkFqU2FJR0dyRlJOaVNlS3hHZVZ4bEYyTXVoUEVTT0ZJ?oc=5",
+    "summary_ja": "世界の小規模農家は全耕作地の12%を使用しているに過ぎないが、その潜在能力を活かせば世界の食料需要のさらなる増加分を賄える可能性がある。一方で、小規模農家は気候変動や市場アクセスなどの課題に直面しており、支援の必要性が示唆されている。",
+    "summary_en": "Smallholder farmers, who use only 12% of the world's arable land, have the potential to meet additional food needs. However, they face significant challenges such as climate risks and limited resources, which must be addressed to unlock this potential.",
+    "tags": [
+      "smallholder farmers",
+      "food security",
+      "arable land",
+      "climate change"
+    ],
+    "bottlenecks": [
+      {
+        "category": "climate_risk",
+        "description": "小規模農家は気候変動の影響を大きく受けており、これが生産性に悪影響を及ぼしている。",
+        "severity": "high",
+        "evidence_quote": "Smallholder farmers are the most vulnerable to the impacts of climate change, which is already affecting their livelihoods and food security.",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [],
+    "ai_confidence": 93,
+    "analyzed_at": "2026-09-21T23:57:17.836913"
   }
 ]
