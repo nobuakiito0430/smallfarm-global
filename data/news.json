@@ -1,54 +1,5 @@
 [
   {
-    "title": "Kenya: Kenya Rebuilds The Cotton Chain From Field To Fabric",
-    "source": "AllAfrica",
-    "date": "2026-09-11",
-    "source_url": "https://allafrica.com/stories/202609110655.html",
-    "summary_ja": "ケニアの沿岸部では、農家が再び綿花栽培に戻っており、新しい製綿所と国内で数少ない統合型紡績工場が連携して、畑から工場までのサプライチェーンを再構築しています。",
-    "summary_en": "Farmers in coastal Kenya are returning to cotton cultivation, while a new ginnery and one of the country's few integrated textile mills are rebuilding the links from field to factory.",
-    "tags": [
-      "Kenya",
-      "Cotton",
-      "Value Chain",
-      "Smallholder Farmers"
-    ],
-    "bottlenecks": [],
-    "success_factors": [
-      {
-        "category": "market_linkage",
-        "description": "製綿所と紡績工場が連携することで、畑から工場までの供給網が再構築されている。",
-        "evidence_quote": "a new ginnery and one of the country's few surviving integrated textile mills are rebuilding links from field to factory."
-      }
-    ],
-    "ai_confidence": 91,
-    "analyzed_at": "2026-09-13T23:01:23.652674"
-  },
-  {
-    "title": "Ghana: A Garment Hub Puts Northern Ghana To Work",
-    "source": "AllAfrica",
-    "date": "2026-09-11",
-    "source_url": "https://allafrica.com/stories/202609110176.html",
-    "summary_ja": "ガーナのサベルグで操業するアパレル企業「Northshore Apparel」は、今後の事業拡大において、縫製ラインと北部ガーナの農家を繋ぎ、地域内のバリューチェーンを構築することを目指している。",
-    "summary_en": "Northshore Apparel, based in Savelugu, is creating formal jobs in the garment sector. The company's future phases aim to connect their production lines with farmers in northern Ghana to develop a more integrated local value chain.",
-    "tags": [
-      "Ghana",
-      "Value Chain",
-      "Garment Industry",
-      "Savelugu"
-    ],
-    "bottlenecks": [],
-    "success_factors": [
-      {
-        "category": "market_linkage",
-        "description": "アパレル生産と現地の農家を接続することで、地域内のバリューチェーンを構築する構想。",
-        "evidence_quote": "Its next phases could connect those sewing lines to northern Ghana's farmers and build a fuller local value chain.",
-        "is_explicit": true
-      }
-    ],
-    "ai_confidence": 83,
-    "analyzed_at": "2026-09-13T23:01:28.766059"
-  },
-  {
     "title": "Half of world’s smallholder farmers, using just 12% of arable land, could meet additional food needs - Down To Earth",
     "source": "Google News Smallholder",
     "date": "2026-09-21",
@@ -92,5 +43,44 @@
     "success_factors": [],
     "ai_confidence": 91,
     "analyzed_at": "2026-09-29T00:53:44.666986"
+  },
+  {
+    "title": "Regenerative agriculture: A lifeline for smallholders? - Down To Earth",
+    "source": "Google News Smallholder",
+    "date": "2026-09-30",
+    "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPbE9ieklqSlFOMU5hcmVOaW11MmpmSGpFQndmWU5kWmNIcHhnTVBmOXRpVEdfSkVHMklVR0RsVE9sOHAybkNLeVpoRnJJV2lmQ0dOWmFoVUlYN1JXU2VUOV9qQnF1WkhqbkM3eW50Ui01Mi1HZ0RyWVRyOWlnbTBJZ1U2RUE3d1dxdlJkeVJGTGc5SlVsVXdQOXlyQVZpbVnSAawBQVVfeXFMTTRBTDN2QWhCRTcxRVVrbGtzOWVZZi1uUHVFNXI3ZTVCLTU0VjBGQnpEVW4tSmxwYmlyNHk3R3J0bXViWC1hRW4tMThRZmZBWTJFbzFlcUFkQUVDZkd0bVFqaVdVRnJiVThmM19FckpfOC0wcGNaclhXWGI3QVJUTmxOVm12SXM3M0tIN3pFQzN4MjRtWjBramlTZktQSC1LWGFHZXFSQTVnWDViaw?oc=5",
+    "summary_ja": "本記事は、小規模農家における再生型農業の可能性について論じており、商業的成功にはコスト削減や土壌改善が不可欠であると指摘しています。一方で、農家が直面する高額な投入財への依存や、気候変動リスクなどの構造的な課題が強調されています。",
+    "summary_en": "This article discusses the potential of regenerative agriculture for smallholders, highlighting that commercial viability depends on reducing costs and improving soil health. It underscores structural challenges such as reliance on expensive inputs and climate change risks.",
+    "tags": [
+      "regenerative agriculture",
+      "smallholders",
+      "sustainability",
+      "climate resilience"
+    ],
+    "bottlenecks": [
+      {
+        "category": "input_market",
+        "description": "化学肥料や農薬など、高額な外部投入財への依存が農家の経済的負担となっています。",
+        "severity": "high",
+        "evidence_quote": "smallholders are often trapped in a cycle of dependency on chemical inputs, which are expensive and can degrade soil health over time.",
+        "is_explicit": true
+      },
+      {
+        "category": "climate_risk",
+        "description": "極端な気象現象が小規模農家の生産活動に深刻な脅威を与えています。",
+        "severity": "high",
+        "evidence_quote": "Smallholder farmers, who are already vulnerable to climate change, face increasing risks from extreme weather events.",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "behavioral_change",
+        "description": "化学肥料から自然由来の有機肥料や生態学的な手法への転換が、コスト削減と収益改善の鍵となります。",
+        "evidence_quote": "By moving away from synthetic fertilisers to organic compost and other nature-based solutions, farmers can reduce their production costs and improve their long-term yields."
+      }
+    ],
+    "ai_confidence": 90,
+    "analyzed_at": "2026-10-12T00:20:13.369420"
   }
 ]
