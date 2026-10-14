@@ -115,5 +115,50 @@
     ],
     "ai_confidence": 90,
     "analyzed_at": "2026-10-14T00:12:23.837518"
+  },
+  {
+    "title": "Empowering Smallholder Farmers - Bayer",
+    "source": "Google News Smallholder",
+    "date": "2026-09-22",
+    "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNckRRVXNNWTRxenRGOWM4aF9VVVlDa2hwb3RkeDNpVDdIcUE1LVJCTmtKS3p4eTBZRGdHV2xIbE50YVVEbzZZQlRLSm9FVEx6TkJHcS1CZ2Fjbm5wMTA3S28zNzNLMm1jSTFzTENRdklfN0pXV2RjZW56SnFXQ3NfQmlSSGxmUF8wbHBfaE02bUJTUQ?oc=5",
+    "summary_ja": "バイエル社は小規模農家の生産性向上と市場アクセス改善を目指し、デジタルツールや高品質な種子・防除技術の提供を行っています。また、パートナーシップを通じて持続可能な農業エコシステムの構築を支援しています。",
+    "summary_en": "Bayer focuses on improving smallholder productivity and market access through the provision of digital tools, high-quality seeds, and crop protection technologies. The company also supports the development of sustainable agricultural ecosystems through strategic partnerships.",
+    "tags": [
+      "Smallholder Farmers",
+      "Bayer",
+      "Agricultural Productivity",
+      "Market Access",
+      "Sustainability"
+    ],
+    "bottlenecks": [
+      {
+        "category": "knowledge_gap",
+        "description": "小規模農家が最新の農業技術やベストプラクティスにアクセスできないことが課題となっています。",
+        "severity": "high",
+        "evidence_quote": "Smallholder farmers often lack access to the latest innovations, training, and agronomic knowledge needed to increase their yields.",
+        "is_explicit": true
+      },
+      {
+        "category": "market_access",
+        "description": "農家が収穫物を公正な価格で販売するための市場とのつながりが不足しています。",
+        "severity": "high",
+        "evidence_quote": "Limited market access and a lack of connections to value chains further hinder their ability to earn a fair income.",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "public_private",
+        "description": "官民連携を通じて、農家に対するリソースや支援の提供を強化しています。",
+        "evidence_quote": "Bayer works through collaborative partnerships to provide smallholders with the resources and support they need to succeed."
+      },
+      {
+        "category": "ict_use",
+        "description": "デジタルツールを活用し、農家が必要な情報やサービスへアクセスしやすくしています。",
+        "evidence_quote": "Leveraging digital platforms, Bayer connects farmers with the essential tools and insights to improve productivity."
+      }
+    ],
+    "ai_confidence": 90,
+    "analyzed_at": "2026-10-14T23:46:55.795897"
   }
 ]
