@@ -1,23 +1,23 @@
 {
-  "total_projects": 28,
+  "total_projects": 29,
   "total_countries": 12,
   "total_beneficiaries": 125088000,
   "total_beneficiaries_display": "1.3億",
   "avg_income_change_pct": 41,
   "total_papers": 0,
-  "total_news": 3,
-  "last_updated": "2026-10-13",
+  "total_news": 4,
+  "last_updated": "2026-10-14",
   "regions": {
     "Sub-Saharan Africa": 10,
+    "Other": 7,
     "Multiple": 6,
-    "Other": 6,
     "South Asia": 4,
     "Latin America": 2
   },
   "implementers": {
     "JICA": 9,
     "World Bank": 3,
-    "null": 2,
+    "null": 3,
     "USAID": 1,
     "IFAD": 1,
     "M-Farm Ltd.": 1,
@@ -34,10 +34,10 @@
     "Northshore Apparel": 1
   },
   "bottleneck_frequency": {
+    "market_access": 7,
     "input_market": 6,
     "scalability": 6,
     "institutional": 6,
-    "market_access": 6,
     "climate_risk": 6,
     "knowledge_gap": 6,
     "financial_access": 4,
@@ -46,7 +46,7 @@
     "value-chain": 1
   },
   "success_factor_frequency": {
-    "market_linkage": 10,
+    "market_linkage": 11,
     "farmer_ownership": 7,
     "institutional_integration": 6,
     "phased_scaleup": 6,
@@ -56,9 +56,9 @@
     "gender_mainstream": 2
   },
   "approaches": {
-    "market-oriented": 14,
+    "market-oriented": 15,
     "value-chain": 8,
-    "climate-smart": 7,
+    "climate-smart": 8,
     "financial-inclusion": 4,
     "digital": 4,
     "input-market": 2,
@@ -66,6 +66,12 @@
     "nutrition": 1
   },
   "timeline": [
+    {
+      "date": "2026-10-14",
+      "title": "GEAR Framework データ更新",
+      "description": "本記事は、小規模農家の生産性向上と商業化を促進するための「GEARフレームワーク」を紹介しています。この枠組みは、再生可能エネルギーを活用し、農産物の加工や市場...",
+      "type": "update"
+    },
     {
       "date": "2026-09-13",
       "title": "Northshore Apparel データ更新",
@@ -88,12 +94,6 @@
       "date": "2026-07-28",
       "title": "World Bank-hosted fund データ更新",
       "description": "世界銀行がホストする基金が、食料不安に対処するため小規模農家に対し3,800万ドルの支援を開始しました。この資金提供は、小規模農家の生産性向上と商業化の促進を目...",
-      "type": "update"
-    },
-    {
-      "date": "2026-07-09",
-      "title": "29th Call for Proposals データ更新",
-      "description": "Common Fund for Commodities（CFC）は、小規模農家、持続可能な農業、包摂的なバリューチェーンを支援するための第29回提案募集を開始し...",
       "type": "update"
     }
   ]

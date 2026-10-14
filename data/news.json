@@ -82,5 +82,38 @@
     ],
     "ai_confidence": 90,
     "analyzed_at": "2026-10-12T00:20:13.369420"
+  },
+  {
+    "title": "Empowering Smallholder Farmers: The GEAR Framework for Energy - SolarQuarter",
+    "source": "Google News Smallholder",
+    "date": "2026-10-13",
+    "source_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQd2ZzSTF1ZVdyNWR4eVRidlh5ckJzbUNuNFh3YUZodVRpRnpFVEl4UEFPcUhPWGdlOVpYdkh0SGhCdUYwZlVLZkxXYldUSURUZ1pZa2QwbWQ5YUJWa2NfOEh1LUpKeUp3cklDaXc2X1ZzeEFSX2taLVRjWHdrdGhsdHRLZFFjWGZZMmxPdjhZMjFjYkhfa3VtRmhFUW1FRnZVeUdrMFVsNGtwYUJDZFFjNGRpNUJvMzV4T3F3bF8zUmpULVUxb0F5YlNwcWtYbUJyaWtBSFBxdHpfZFk?oc=5",
+    "summary_ja": "本記事は、小規模農家の生産性向上と商業化を促進するための「GEARフレームワーク」を紹介しています。この枠組みは、再生可能エネルギーを活用し、農産物の加工や市場アクセスの改善を通じて農家の収益性を高めることを目的としています。",
+    "summary_en": "This article introduces the GEAR framework, which aims to enhance the productivity and commercialization of smallholder farmers. The framework focuses on leveraging renewable energy solutions to improve food processing and market access for farmers.",
+    "tags": [
+      "Smallholder Farmers",
+      "GEAR Framework",
+      "Renewable Energy",
+      "Agricultural Commercialization"
+    ],
+    "bottlenecks": [
+      {
+        "category": "market_access",
+        "description": "エネルギーへのアクセス不足が、小規模農家の市場競争力や加工能力を制限している。",
+        "severity": "high",
+        "evidence_quote": "Limited access to energy prevents smallholder farmers from processing their produce, reaching wider markets, and improving their livelihoods.",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "market_linkage",
+        "description": "エネルギーソリューションを市場アクセスと統合することで、バリューチェーン全体を改善するアプローチ。",
+        "evidence_quote": "The GEAR framework identifies specific interventions to enhance the energy-food-market nexus, enabling farmers to move from subsistence to commercialized farming.",
+        "is_explicit": true
+      }
+    ],
+    "ai_confidence": 90,
+    "analyzed_at": "2026-10-14T00:12:23.837518"
   }
 ]
