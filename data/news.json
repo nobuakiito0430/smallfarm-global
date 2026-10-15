@@ -160,5 +160,46 @@
     ],
     "ai_confidence": 90,
     "analyzed_at": "2026-10-14T23:46:55.795897"
+  },
+  {
+    "title": "Rethinking agricultural subsidies: three ways public finance can build smallholder resilience - Economist Enterprise",
+    "source": "Google News Smallholder",
+    "date": "2026-10-15",
+    "source_url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPRFFBTkljMTlsMm1QcklRTWM1Ny1KQjBSbGtabGZoMHJvdzRNa2V4cWtSOExEZjZpZEJTUVVjQmllQjdkaEZrcHdKNlNiZWxwWjhVbFJzaTRoNjMyNllMYnkwSGxEd29EUEllYWt6VmVCblRndHdNakFUbnBiblhWOW1RYnFYejgtWjZhV1lob2luSEFuYS1aUXBTNkdUaDJiQUNMcl8yMklZT2l2WlJKazZuTEtObFlhcExUSUJCVlMzbG5lOVQ0ZXNsc1A0RHBOWElvdXBsbjFrZjZZYWZkM25rdUFWR1k?oc=5",
+    "summary_ja": "本記事は、小規模農家のレジリエンスを構築するために、農業補助金のあり方を再考し、公的資金をより効果的に活用する3つのアプローチを提言しています。具体的には、気候変動リスクへの対応、市場へのアクセス改善、および金融支援の最適化が焦点となっています。",
+    "summary_en": "The article suggests rethinking agricultural subsidies to build smallholder resilience, proposing three ways to use public finance more effectively. The focus is on addressing climate risks, improving market access, and optimizing financial support for small-scale farmers.",
+    "tags": [
+      "smallholder",
+      "agricultural subsidies",
+      "public finance",
+      "climate resilience",
+      "commercialization"
+    ],
+    "bottlenecks": [
+      {
+        "category": "climate_risk",
+        "description": "多くの小規模農家が気候変動に対して脆弱であり、従来の補助金制度ではこのリスクを十分に軽減できていない。",
+        "severity": "high",
+        "evidence_quote": "Smallholders are disproportionately vulnerable to climate shocks, yet current subsidy regimes often fail to address these risks effectively.",
+        "is_explicit": true
+      },
+      {
+        "category": "financial_access",
+        "description": "公的資金の配分が非効率的であり、農家の資本へのアクセスを阻害している。",
+        "severity": "medium",
+        "evidence_quote": "Inefficient allocation of public funds continues to stifle smallholders' access to the necessary capital to scale their operations.",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "public_private",
+        "description": "公的資金を民間投資を呼び込むための触媒として活用することで、農家のレジリエンスを高めることが可能となる。",
+        "evidence_quote": "Public finance can be leveraged to crowd in private investment, creating a more sustainable framework for smallholder growth and resilience.",
+        "is_explicit": true
+      }
+    ],
+    "ai_confidence": 93,
+    "analyzed_at": "2026-10-15T23:35:51.215607"
   }
 ]
