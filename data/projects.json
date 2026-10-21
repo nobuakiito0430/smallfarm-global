@@ -1950,5 +1950,67 @@
     "ai_confidence": 90,
     "last_updated": "2026-10-14",
     "coordinates": null
+  },
+  {
+    "id": "joint-programme-to-scale-clima",
+    "name": "Joint programme to scale climate finance and resilience for smallholders",
+    "name_ja": "Joint programme to scale climate finance and resilience for smallholders",
+    "country": [
+      "Indonesia"
+    ],
+    "country_ja": [
+      "Indonesia"
+    ],
+    "region": "Southeast Asia",
+    "flag": "🌍",
+    "implementer": "Government of Indonesia and United Nations",
+    "start_year": null,
+    "end_year": null,
+    "status": "active",
+    "approach": [
+      "climate-smart",
+      "financial-inclusion"
+    ],
+    "approach_ja": [
+      "climate-smart",
+      "financial-inclusion"
+    ],
+    "target_crops": [],
+    "climate_relevance": "high",
+    "description_en": "The Government of Indonesia and the United Nations have launched a joint programme to scale climate finance and improve resilience for smallholder farmers. The initiative aims to support the sustainability of small-scale agriculture by enhancing access to climate-related financial resources.",
+    "description_ja": "インドネシア政府と国連は、小規模農家の気候変動へのレジリエンス強化と資金アクセス向上を目的とした共同プログラムを開始しました。この取り組みは、気候金融の拡大を通じて小規模農業の持続可能性を支援することを目指しています。",
+    "outcomes": {
+      "income_change_pct": null,
+      "participants": null,
+      "key_result": "気候金融の拡大と小規模農家のレジリエンス向上のための共同プログラムが開始された。"
+    },
+    "bottlenecks": [
+      {
+        "category": "climate_risk",
+        "description": "小規模農家が気候変動によるリスクに対して脆弱であること。",
+        "severity": "high",
+        "evidence_quote": "The programme aims to... scale climate finance and resilience for smallholders",
+        "is_explicit": true
+      }
+    ],
+    "success_factors": [
+      {
+        "category": "public_private",
+        "description": "政府と国連という公的機関の連携によるプログラムの実施。",
+        "evidence_quote": "Indonesia and United Nations launch joint programme",
+        "is_explicit": true
+      }
+    ],
+    "tags": [
+      "Indonesia",
+      "United Nations",
+      "Climate Finance",
+      "Smallholders",
+      "Resilience"
+    ],
+    "source_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQbnZMZTBNTVp5alZudlBuTzN3LW1GdXlVOGh3ZTdsTUxzZThrdTc2RDY5TUpkemZVNU9DT0hBTzlFTXRSUEVqZ3FiMlFlcHBYU0E3TFpsU1Z6NDFqYkdPRk1IWGRlMWtLTTVmVmVyb1RJMThNVW9oN09Qa0RFWFNzaDZjbTJ1LXhEX3RNOWZkV0g2REZiOHNqX0pia1NBUUZsQ1h1YnpZOEN2VUR5bmRuRUFlaWNUSXR5dDN5UUZwZjg?oc=5",
+    "ai_confidence": 89,
+    "last_updated": "2026-10-21",
+    "coordinates": null
   }
 ]
