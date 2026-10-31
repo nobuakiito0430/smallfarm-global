@@ -1,44 +1,5 @@
 [
   {
-    "title": "Regenerative agriculture: A lifeline for smallholders? - Down To Earth",
-    "source": "Google News Smallholder",
-    "date": "2026-09-30",
-    "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPbE9ieklqSlFOMU5hcmVOaW11MmpmSGpFQndmWU5kWmNIcHhnTVBmOXRpVEdfSkVHMklVR0RsVE9sOHAybkNLeVpoRnJJV2lmQ0dOWmFoVUlYN1JXU2VUOV9qQnF1WkhqbkM3eW50Ui01Mi1HZ0RyWVRyOWlnbTBJZ1U2RUE3d1dxdlJkeVJGTGc5SlVsVXdQOXlyQVZpbVnSAawBQVVfeXFMTTRBTDN2QWhCRTcxRVVrbGtzOWVZZi1uUHVFNXI3ZTVCLTU0VjBGQnpEVW4tSmxwYmlyNHk3R3J0bXViWC1hRW4tMThRZmZBWTJFbzFlcUFkQUVDZkd0bVFqaVdVRnJiVThmM19FckpfOC0wcGNaclhXWGI3QVJUTmxOVm12SXM3M0tIN3pFQzN4MjRtWjBramlTZktQSC1LWGFHZXFSQTVnWDViaw?oc=5",
-    "summary_ja": "本記事は、小規模農家における再生型農業の可能性について論じており、商業的成功にはコスト削減や土壌改善が不可欠であると指摘しています。一方で、農家が直面する高額な投入財への依存や、気候変動リスクなどの構造的な課題が強調されています。",
-    "summary_en": "This article discusses the potential of regenerative agriculture for smallholders, highlighting that commercial viability depends on reducing costs and improving soil health. It underscores structural challenges such as reliance on expensive inputs and climate change risks.",
-    "tags": [
-      "regenerative agriculture",
-      "smallholders",
-      "sustainability",
-      "climate resilience"
-    ],
-    "bottlenecks": [
-      {
-        "category": "input_market",
-        "description": "化学肥料や農薬など、高額な外部投入財への依存が農家の経済的負担となっています。",
-        "severity": "high",
-        "evidence_quote": "smallholders are often trapped in a cycle of dependency on chemical inputs, which are expensive and can degrade soil health over time.",
-        "is_explicit": true
-      },
-      {
-        "category": "climate_risk",
-        "description": "極端な気象現象が小規模農家の生産活動に深刻な脅威を与えています。",
-        "severity": "high",
-        "evidence_quote": "Smallholder farmers, who are already vulnerable to climate change, face increasing risks from extreme weather events.",
-        "is_explicit": true
-      }
-    ],
-    "success_factors": [
-      {
-        "category": "behavioral_change",
-        "description": "化学肥料から自然由来の有機肥料や生態学的な手法への転換が、コスト削減と収益改善の鍵となります。",
-        "evidence_quote": "By moving away from synthetic fertilisers to organic compost and other nature-based solutions, farmers can reduce their production costs and improve their long-term yields."
-      }
-    ],
-    "ai_confidence": 90,
-    "analyzed_at": "2026-10-12T00:20:13.369420"
-  },
-  {
     "title": "Empowering Smallholder Farmers: The GEAR Framework for Energy - SolarQuarter",
     "source": "Google News Smallholder",
     "date": "2026-10-13",
